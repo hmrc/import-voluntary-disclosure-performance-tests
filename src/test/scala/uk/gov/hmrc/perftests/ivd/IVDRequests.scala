@@ -71,6 +71,6 @@ object IVDRequests extends BaseRequests with Pages {
   val getHelloWorld: HttpRequestBuilder =
     http("get Hello World Page")
       .get(HelloWorldPage.url)
-      .check(status.is(303))
+      .check(status.is(200))
 
 }
