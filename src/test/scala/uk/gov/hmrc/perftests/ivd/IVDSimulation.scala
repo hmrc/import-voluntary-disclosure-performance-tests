@@ -22,12 +22,12 @@ import uk.gov.hmrc.perftests.ivd.IVDRequests._
 
 class IVDSimulation extends PerformanceTestRunner {
 
-  setup("auth", "Auth login")
-    .withRequests(getAuthLogin, authLogin)
+//  setup("auth", "Auth login")
+//    .withRequests(getAuthLogin, authLogin)
 
   setup("importVoluntaryDisclosure", "Import Voluntary Disclosure")
     .withRequests(
-      getIndexPage,
+//      getIndexPage,
       getHelloWorld
     )
 

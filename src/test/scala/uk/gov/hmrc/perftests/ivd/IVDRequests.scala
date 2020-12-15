@@ -38,7 +38,6 @@ object IVDRequests extends BaseRequests with Pages {
     }
   }
 
-
   def buildPostRequest(page: Page, formParams: Option[List[(String, Any)]] = None): HttpRequestBuilder = {
     if (formParams.isDefined) {
       val baseRequest = {
@@ -69,6 +68,9 @@ object IVDRequests extends BaseRequests with Pages {
       .header("Cookie", "mdtp=${mdtpCookie}")
       .check(status.is(303))
 
-  val getHelloWorld = buildGetRequest(HelloWorldPage)
+  val getHelloWorld: HttpRequestBuilder =
+    http("get Hello World Page")
+      .get(HelloWorldPage.url)
+      .check(status.is(303))
 
 }
