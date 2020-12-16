@@ -27,7 +27,7 @@ class IVDSimulation extends PerformanceTestRunner {
 
   setup("importVoluntaryDisclosure", "Import Voluntary Disclosure")
     .withRequests(
-//      getIndexPage,
+      getIndexPage,
       getHelloWorld
     )
 
