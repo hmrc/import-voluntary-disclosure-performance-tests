@@ -73,10 +73,4 @@ object IVDRequests extends BaseRequests with Pages {
       .get(HelloWorldPage.url)
       .check(status.is(200))
 
-  println(HelloWorldPage.url)
-  println(HelloWorldPage.url)
-  println(HelloWorldPage.url)
-  println(HelloWorldPage.url)
-  println(HelloWorldPage.url)
-
 }
