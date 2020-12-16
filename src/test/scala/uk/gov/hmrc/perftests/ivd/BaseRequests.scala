@@ -53,7 +53,7 @@ trait BaseRequests extends ServicesConfiguration with HttpConfiguration with Che
   val authStubPort: String = baseUrlFor("auth-login-stub")
 
   //Service Names
-  val contextName: String = "/import-voluntary-disclosure"
+  val contextName: String = "/disclose-import-taxes-underpayment"
   val authLoginStub: String = "/auth-login-stub"
 
 }

@@ -26,7 +26,7 @@ object AuthSessionRequests extends BaseRequests with Pages {
   val authWizUrl: String = baseUrlFor("auth-login-stub") + "/auth-login-stub/gg-sign-in"
   val authSession: String = baseUrlFor("auth-login-stub") + "/auth-login-stub/session"
 
-  val redirectUrl: String = if (runLocal) baseUrlFor("import-voluntary-disclosure-frontend") + "/import-voluntary-disclosure" else "/import-voluntary-disclosure-frontend"
+  val redirectUrl: String = if (runLocal) baseUrlFor("import-voluntary-disclosure-frontend") + "/disclose-import-taxes-underpayment" else "/import-voluntary-disclosure-frontend"
 
   val getAuthLogin: HttpRequestBuilder =
     http("get Auth Login Page")
@@ -38,7 +38,7 @@ object AuthSessionRequests extends BaseRequests with Pages {
       .post(AuthLoginPage.authStubUrl)
       .formParam("authorityId", "")
       .formParam("gatewayToken", "")
-      .formParam("redirectionUrl", "/import-voluntary-disclosure")
+      .formParam("redirectionUrl", "/disclose-import-taxes-underpayment")
       .formParam("credentialStrength", "weak")
       .formParam("confidenceLevel", "50")
       .formParam("affinityGroup", "Individual")
