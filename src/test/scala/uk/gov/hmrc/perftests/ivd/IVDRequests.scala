@@ -70,6 +70,8 @@ object IVDRequests extends BaseRequests with Pages {
 
   val getUserType = buildGetRequest(UserTypePage)
   val postUserType = buildPostRequest(UserTypePage, Some(List(("value","importer"))))
+  val getNumberOfEntries = buildGetRequest(NumberOfEntriesPage)
+  val postNumberOfEntries = buildPostRequest(NumberOfEntriesPage, Some(List(("value", "oneEntry"))))
 
 
 }

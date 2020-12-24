@@ -29,7 +29,9 @@ class IVDSimulation extends PerformanceTestRunner {
     .withRequests(
       getIndexPage,
       getUserType,
-      postUserType
+      postUserType,
+      getNumberOfEntries,
+      postNumberOfEntries
     )
 
   runSimulation()
