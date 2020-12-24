@@ -68,9 +68,8 @@ object IVDRequests extends BaseRequests with Pages {
       .header("Cookie", "mdtp=${mdtpCookie}")
       .check(status.is(303))
 
-  val getHelloWorld: HttpRequestBuilder =
-    http("get Hello World Page")
-      .get(HelloWorldPage.url)
-      .check(status.is(200))
+  val getUserType = buildGetRequest(UserTypePage)
+  val postUserType = buildPostRequest(UserTypePage, Some(List(("value","importer"))))
+
 
 }

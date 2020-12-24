@@ -32,6 +32,7 @@ sbt -Dperftest.runSmokeTest=true -DrunLocal=true gatling:test
 #### Running the performance test
 ```
 sbt -DrunLocal=true gatling:test
+
 ```
 ### Run the example test against staging environment
 
