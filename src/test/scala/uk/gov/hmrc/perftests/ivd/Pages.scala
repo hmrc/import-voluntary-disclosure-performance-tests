@@ -23,6 +23,6 @@ trait Pages extends BaseRequests {
 
   //Common Routes
   object IndexPage extends Page("", "Index Page")
-  object HelloWorldPage extends Page("/hello-world", "Hello World")
+  object UserTypePage extends Page("/who-is-disclosing", "User Type")
 
 }
