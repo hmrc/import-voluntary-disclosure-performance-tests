@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 HM Revenue & Customs
+ * Copyright 2021 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,5 +24,6 @@ trait Pages extends BaseRequests {
   //Common Routes
   object IndexPage extends Page("", "Index Page")
   object UserTypePage extends Page("/who-is-disclosing", "User Type")
+  object NumberOfEntriesPage extends Page("/one-or-more-entries", "Number Of Entries")
 
 }

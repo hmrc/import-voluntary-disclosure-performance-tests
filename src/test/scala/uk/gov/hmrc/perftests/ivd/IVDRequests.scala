@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 HM Revenue & Customs
+ * Copyright 2021 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -68,8 +68,11 @@ object IVDRequests extends BaseRequests with Pages {
       .header("Cookie", "mdtp=${mdtpCookie}")
       .check(status.is(303))
 
-  val getUserType = buildGetRequest(UserTypePage)
-  val postUserType = buildPostRequest(UserTypePage, Some(List(("value","importer"))))
+  val getUserType: HttpRequestBuilder = buildGetRequest(UserTypePage)
+  val postUserType: HttpRequestBuilder = buildPostRequest(UserTypePage, Some(List(("value","importer"))))
+
+  val getNumberOfEntries: HttpRequestBuilder = buildGetRequest(NumberOfEntriesPage)
+  val postNumberOfEntries: HttpRequestBuilder = buildPostRequest(NumberOfEntriesPage, Some(List(("value", "oneEntry"))))
 
 
 }
