@@ -31,7 +31,11 @@ class IVDSimulation extends PerformanceTestRunner {
       getUserType,
       postUserType,
       getNumberOfEntries,
-      postNumberOfEntries
+      postNumberOfEntries,
+
+//    TODO - will need to be rebased and updated after the Entry Details flow has been merged
+      getAcceptanceDate,
+      postAcceptanceDate
     )
 
   runSimulation()
