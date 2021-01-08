@@ -31,7 +31,9 @@ class IVDSimulation extends PerformanceTestRunner {
       getUserType,
       postUserType,
       getNumberOfEntries,
-      postNumberOfEntries
+      postNumberOfEntries,
+      getEntryDetails,
+      postEntryDetails
     )
 
   runSimulation()

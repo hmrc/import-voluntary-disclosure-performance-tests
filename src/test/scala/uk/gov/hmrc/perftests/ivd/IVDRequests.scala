@@ -74,5 +74,13 @@ object IVDRequests extends BaseRequests with Pages {
   val getNumberOfEntries: HttpRequestBuilder = buildGetRequest(NumberOfEntriesPage)
   val postNumberOfEntries: HttpRequestBuilder = buildPostRequest(NumberOfEntriesPage, Some(List(("value", "oneEntry"))))
 
+  val getEntryDetails: HttpRequestBuilder = buildGetRequest(EntryDetailsPage)
+  val postEntryDetails: HttpRequestBuilder = buildPostRequest(EntryDetailsPage,
+    Some(List(
+      ("epu", "123"),
+      ("entryNumber", "123456Q"),
+      ("entryDate.day", "01"),
+      ("entryDate.month", "01"),
+      ("entryDate.year", "2021"))))
 
 }

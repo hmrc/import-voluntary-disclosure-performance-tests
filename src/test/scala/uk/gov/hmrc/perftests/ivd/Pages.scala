@@ -25,5 +25,6 @@ trait Pages extends BaseRequests {
   object IndexPage extends Page("", "Index Page")
   object UserTypePage extends Page("/who-is-disclosing", "User Type")
   object NumberOfEntriesPage extends Page("/one-or-more-entries", "Number Of Entries")
+  object EntryDetailsPage extends Page("/disclosure/entry-details", "Entry Details")
 
 }
