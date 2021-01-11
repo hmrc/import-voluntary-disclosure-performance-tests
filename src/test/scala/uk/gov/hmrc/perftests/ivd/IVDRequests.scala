@@ -83,4 +83,11 @@ object IVDRequests extends BaseRequests with Pages {
       ("entryDate.month", "01"),
       ("entryDate.year", "2021"))))
 
+  val getUnderpaymentType: HttpRequestBuilder = buildGetRequest(UnderpaymentTypePage)
+  val postUnderpaymentType: HttpRequestBuilder = buildPostRequest(UnderpaymentTypePage,
+    Some(List(
+      ("customsDuty", "true"),
+      ("importVAT", "true"),
+      ("exciseDuty", "true"))))
+
 }
