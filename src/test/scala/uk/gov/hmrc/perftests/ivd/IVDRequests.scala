@@ -83,4 +83,7 @@ object IVDRequests extends BaseRequests with Pages {
       ("entryDate.month", "01"),
       ("entryDate.year", "2021"))))
 
+  val getAcceptanceDate: HttpRequestBuilder = buildGetRequest(AcceptanceDatePage)
+  val postAcceptanceDate: HttpRequestBuilder = buildPostRequest(AcceptanceDatePage, Some(List(("value", "true"))))
+
 }
