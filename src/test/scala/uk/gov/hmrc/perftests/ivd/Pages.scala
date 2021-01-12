@@ -28,5 +28,6 @@ trait Pages extends BaseRequests {
   object EntryDetailsPage extends Page("/disclosure/entry-details", "Entry Details")
   object AcceptanceDatePage extends Page("/disclosure/when-entry-acceptance-date", "Acceptance Date")
   object UnderpaymentTypePage extends Page("/disclosure/what-duty-type-underpaid", "Underpayment Type")
+  object CustomsDutyPage extends Page("/disclosure/customs-duty-details", "Customs Duty")
 
 }
