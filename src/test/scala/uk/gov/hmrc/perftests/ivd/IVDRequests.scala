@@ -99,4 +99,6 @@ object IVDRequests extends BaseRequests with Pages {
       ("original", "200"),
       ("amended", "350"))))
 
+  val getSupportingDocumentation: HttpRequestBuilder = buildGetRequest(SupportingDocumentsPage, false)
+
 }
