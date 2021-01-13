@@ -96,7 +96,7 @@ object IVDRequests extends BaseRequests with Pages {
   val getCustomsDuty: HttpRequestBuilder = buildGetRequest(CustomsDutyPage)
   val postCustomsDuty: HttpRequestBuilder = buildPostRequest(CustomsDutyPage,
     Some(List(
-      ("originalAmount", "200"), //ID subject to change (depending on code)
-      ("amendedAmount", "350")))) //ID subject to change (depending on code)
+      ("original", "200"),
+      ("amended", "350"))))
 
 }
