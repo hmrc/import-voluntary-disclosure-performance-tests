@@ -93,7 +93,7 @@ object IVDRequests extends BaseRequests with Pages {
       ("importVAT", "true"),
       ("exciseDuty", "true"))))
 
-  val getSupportingDocumentation: HttpRequestBuilder = buildGetRequest(SupportingDocumentsPage)
+  val getSupportingDocumentation: HttpRequestBuilder = buildGetRequest(SupportingDocumentsPage, false)
 
 
 }
