@@ -97,7 +97,7 @@ object IVDRequests extends BaseRequests with Pages {
   val postCustomsDuty: HttpRequestBuilder = buildPostRequest(CustomsDutyPage,
     Some(List(
       ("original", "200"),
-      ("amended", "350"))))
+      ("amended", "300"))))
 
   val getSupportingDocumentation: HttpRequestBuilder = buildGetRequest(SupportingDocumentsPage, false)
 
