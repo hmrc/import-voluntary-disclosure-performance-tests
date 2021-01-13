@@ -18,7 +18,7 @@ package uk.gov.hmrc.perftests.ivd
 
 import uk.gov.hmrc.performance.simulation.PerformanceTestRunner
 import uk.gov.hmrc.perftests.ivd.AuthSessionRequests._
-import uk.gov.hmrc.perftests.ivd.IVDRequests.{getUnderpaymentType, _}
+import uk.gov.hmrc.perftests.ivd.IVDRequests._
 
 class IVDSimulation extends PerformanceTestRunner {
 
