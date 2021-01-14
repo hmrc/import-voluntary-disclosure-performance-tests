@@ -29,6 +29,6 @@ trait Pages extends BaseRequests {
   object AcceptanceDatePage extends Page("/disclosure/when-entry-acceptance-date", "Acceptance Date")
   object UnderpaymentTypePage extends Page("/disclosure/what-duty-type-underpaid", "Underpayment Type")
   object SupportingDocumentsPage extends Page("/disclosure/supporting-documentation-format", "Supporting Documentation Formats Info")
-  object ExciseDutyDetailsPage extends Page("/disclosure/import-vat-details", "Import VAT")
+  object ExciseDutyDetailsPage extends Page("/disclosure/excise-duty-details", "Excise Duty Details")
 
 }
