@@ -38,6 +38,7 @@ class IVDSimulation extends PerformanceTestRunner {
       postAcceptanceDate,
       getUnderpaymentType,
       postUnderpaymentType,
+      getUnderpaymentSummary,
       getSupportingDocumentation
     )
 
