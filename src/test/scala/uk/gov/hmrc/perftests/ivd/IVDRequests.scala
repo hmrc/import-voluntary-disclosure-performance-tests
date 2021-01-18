@@ -99,6 +99,12 @@ object IVDRequests extends BaseRequests with Pages {
       ("original", "200"),
       ("amended", "300"))))
 
+  val getImportVAT: HttpRequestBuilder = buildGetRequest(CustomsDutyPage)
+  val postImportVAT: HttpRequestBuilder = buildPostRequest(CustomsDutyPage,
+    Some(List(
+      ("original", "350"),
+      ("amended", "500"))))
+
   val getSupportingDocumentation: HttpRequestBuilder = buildGetRequest(SupportingDocumentsPage, false)
 
 }
