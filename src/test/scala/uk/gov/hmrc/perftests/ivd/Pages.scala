@@ -31,5 +31,6 @@ trait Pages extends BaseRequests {
   object CustomsDutyPage extends Page("/disclosure/customs-duty-details", "Customs Duty")
   object ImportVATPage extends Page("/disclosure/import-vat-details", "Import VAT")
   object SupportingDocumentsPage extends Page("/disclosure/supporting-documentation-format", "Supporting Documentation Formats Info")
+  object ExciseDutyDetailsPage extends Page("/disclosure/excise-duty-details", "Excise Duty Details")
 
 }
