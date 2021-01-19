@@ -44,6 +44,7 @@ class IVDSimulation extends PerformanceTestRunner {
       postImportVAT,
       getExciseDutyDetails,
       postExciseDutyDetails,
+      getUnderpaymentSummary,
       getSupportingDocumentation
     )
 
