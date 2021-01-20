@@ -36,6 +36,8 @@ class IVDSimulation extends PerformanceTestRunner {
       postEntryDetails,
       getAcceptanceDate,
       postAcceptanceDate,
+      getCustomsProcedureCode,
+      postCustomsProcedureCode,
       getUnderpaymentType,
       postUnderpaymentType,
       getCustomsDuty,
