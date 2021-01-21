@@ -86,6 +86,9 @@ object IVDRequests extends BaseRequests with Pages {
   val getAcceptanceDate: HttpRequestBuilder = buildGetRequest(AcceptanceDatePage)
   val postAcceptanceDate: HttpRequestBuilder = buildPostRequest(AcceptanceDatePage, Some(List(("value", "true"))))
 
+  val getEnterCustomsProcedureCode: HttpRequestBuilder = buildGetRequest(EnterCustomsProcedureCodePage)
+  val postEnterCustomsProcedureCode: HttpRequestBuilder = buildPostRequest(EnterCustomsProcedureCodePage, Some(List(("cpc", "1234567"))))
+
   val getCustomsProcedureCode: HttpRequestBuilder = buildGetRequest(CustomsProcedureCodePage)
   val postCustomsProcedureCode: HttpRequestBuilder = buildPostRequest(CustomsProcedureCodePage, Some(List(("value", "false"))))
 
