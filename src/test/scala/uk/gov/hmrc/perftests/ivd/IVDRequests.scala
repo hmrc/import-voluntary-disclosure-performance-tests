@@ -120,6 +120,13 @@ object IVDRequests extends BaseRequests with Pages {
 
   val getUnderpaymentSummary: HttpRequestBuilder = buildGetRequest(UnderpaymentSummaryPage, false)
 
+  val getTraderContactDetails: HttpRequestBuilder = buildGetRequest(TraderContactDetailsPage)
+  val postTraderContactDetails: HttpRequestBuilder = buildPostRequest(TraderContactDetailsPage,
+    Some(List(
+      ("fullName", "First last"),
+      ("email", "email@email.com"),
+      ("phoneNumber", "0123456789"))))
+
   val getDeferment: HttpRequestBuilder = buildGetRequest(DefermentPage)
   val postDeferment: HttpRequestBuilder = buildPostRequest(DefermentPage, Some(List(("value", "false"))))
 
