@@ -120,6 +120,9 @@ object IVDRequests extends BaseRequests with Pages {
 
   val getUnderpaymentSummary: HttpRequestBuilder = buildGetRequest(UnderpaymentSummaryPage, false)
 
+  val getDeferment: HttpRequestBuilder = buildGetRequest(DefermentPage)
+  val postDeferment: HttpRequestBuilder = buildPostRequest(DefermentPage, Some(List(("value", "false"))))
+
   val getSupportingDocumentation: HttpRequestBuilder = buildGetRequest(SupportingDocumentsPage, false)
 
 }
