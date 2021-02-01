@@ -127,6 +127,9 @@ object IVDRequests extends BaseRequests with Pages {
       ("email", "email@email.com"),
       ("phoneNumber", "0123456789"))))
 
+  val getImporterAddress: HttpRequestBuilder = buildGetRequest(ImporterAddressPage)
+  val postImporterAddress: HttpRequestBuilder = buildPostRequest(ImporterAddressPage, Some(List(("value", "true"))))
+
   val getDeferment: HttpRequestBuilder = buildGetRequest(DefermentPage)
   val postDeferment: HttpRequestBuilder = buildPostRequest(DefermentPage, Some(List(("value", "false"))))
 

@@ -37,5 +37,6 @@ trait Pages extends BaseRequests {
   object TraderContactDetailsPage extends Page("/disclosure/importer-contact-details", "Trader Contact Details")
   object DefermentPage extends Page("/disclosure/paying-by-deferment", "Deferment")
   object SupportingDocumentsPage extends Page("/disclosure/supporting-documentation-format", "Supporting Documentation Formats Info")
+  object ImporterAddressPage extends Page("/disclosure/importer-address", "Importer Address")
 
 }
