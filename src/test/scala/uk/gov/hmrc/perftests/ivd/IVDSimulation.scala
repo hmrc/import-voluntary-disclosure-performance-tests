@@ -51,6 +51,8 @@ class IVDSimulation extends PerformanceTestRunner {
       getUnderpaymentSummary,
       getTraderContactDetails,
       postTraderContactDetails,
+      getImporterAddress,
+      postImporterAddress,
       getDeferment,
       postDeferment,
       getSupportingDocumentation
