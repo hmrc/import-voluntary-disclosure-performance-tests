@@ -57,6 +57,7 @@ class IVDSimulation extends PerformanceTestRunner {
       postDeferment,
       getSupportingDocumentation,
       getUploadfile
+//      getUploadAnotherFile
 //      getUploadAnotherFile,
 //      postUploadAnotherFile,
 //      getRemoveUploadedFile,

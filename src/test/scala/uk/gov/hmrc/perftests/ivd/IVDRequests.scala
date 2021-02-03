@@ -137,4 +137,8 @@ object IVDRequests extends BaseRequests with Pages {
 
   val getUploadfile: HttpRequestBuilder = buildGetRequest(UploadFilePage,false)
 
+//  val getUploadAnotherFile: HttpRequestBuilder = buildGetRequest(UploadAnotherFilePage,false)
+//
+//  val getRemoveUploadedFile: HttpRequestBuilder = buildGetRequest(RemoveUploadedFilePage,false)
+//  val postRemoveUploadedFile: HttpRequestBuilder = buildPostRequest(RemoveUploadedFilePage, Some(List(("value", "false"))))
 }

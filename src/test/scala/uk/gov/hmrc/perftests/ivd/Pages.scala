@@ -40,6 +40,7 @@ trait Pages extends BaseRequests {
   object ImporterAddressPage extends Page("/disclosure/importer-address", "Importer Address")
   object UploadFilePage extends Page("/disclosure/upload-file", "Upload File")
 //  object UploadAnotherFilePage extends Page("/disclosure/upload-another-file", "Upload Another File")
-//  object RemoveUploadedFilePage extends Page("/disclosure/remove-file/:index", "Remove Uploaded File")
+  //  object UploadAnotherFilePage extends Page("/disclosure/upload-another-file", "Upload Another File")
+ // object RemoveUploadedFilePage extends Page("/disclosure/remove-file/1", "Remove Uploaded File")
 
 }
