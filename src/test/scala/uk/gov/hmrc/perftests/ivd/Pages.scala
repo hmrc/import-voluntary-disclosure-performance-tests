@@ -39,7 +39,9 @@ trait Pages extends BaseRequests {
   object SupportingDocumentsPage extends Page("/disclosure/supporting-documentation-format", "Supporting Documentation Formats Info")
   object ImporterAddressPage extends Page("/disclosure/importer-address", "Importer Address")
   object UploadFilePage extends Page("/disclosure/upload-file", "Upload File")
-//  object UploadAnotherFilePage extends Page("/disclosure/upload-another-file", "Upload Another File")
+  object UploadFileSuccessRedirectPage extends Page(s"/disclosure/upload-file/upscan-response?key=$${upscanKey}", "Upload File Success Redirect")
+  object UploadFileCallBackPage extends UpscanCallbackPage("/internal/call-back-from-upscan")
+  //  object UploadAnotherFilePage extends Page("/disclosure/upload-another-file", "Upload Another File")
   //  object UploadAnotherFilePage extends Page("/disclosure/upload-another-file", "Upload Another File")
  // object RemoveUploadedFilePage extends Page("/disclosure/remove-file/1", "Remove Uploaded File")
 

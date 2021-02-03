@@ -20,6 +20,7 @@ package uk.gov.hmrc.perftests.ivd
 import simulation.PerformanceTestRunner2
 import uk.gov.hmrc.perftests.ivd.AuthSessionRequests._
 import uk.gov.hmrc.perftests.ivd.IVDRequests._
+import uk.gov.hmrc.perftests.ivd.UpscanRequests.upscanPost
 
 
 class IVDSimulation extends PerformanceTestRunner2 {
@@ -58,7 +59,9 @@ class IVDSimulation extends PerformanceTestRunner2 {
       getDeferment,
       postDeferment,
       getSupportingDocumentation,
-      getUploadfile
+      getUploadfile,
+      getUploadFileSuccessRedirect,
+      upscanPost
       //      getUploadAnotherFile
       //      getUploadAnotherFile,
       //      postUploadAnotherFile,

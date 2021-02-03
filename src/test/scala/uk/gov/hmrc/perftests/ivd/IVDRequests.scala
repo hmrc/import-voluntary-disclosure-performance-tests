@@ -137,6 +137,16 @@ object IVDRequests extends BaseRequests with Pages {
 
   val getUploadfile: HttpRequestBuilder = buildGetRequest(UploadFilePage,false)
 
+
+  val getUploadFileSuccessRedirect: HttpRequestBuilder =
+  http("Upload file Success")
+    .get(UploadFileSuccessRedirectPage.url)
+    .header("Cookie", "mdtp=${mdtpCookie}")
+    .check(status.is(303))
+
+
+
+
 //  val getUploadAnotherFile: HttpRequestBuilder = buildGetRequest(UploadAnotherFilePage,false)
 //
 //  val getRemoveUploadedFile: HttpRequestBuilder = buildGetRequest(RemoveUploadedFilePage,false)

@@ -40,6 +40,13 @@ trait BaseRequests extends ServicesConfiguration with HttpConfiguration with Che
     val name: String = friendlyName
   }
 
+  class UpscanCallbackPage (path: String, friendlyName: String = "") {
+    val url: String = ivdBaseUrl + path
+    val relativeUrl: String = path
+    val authStubUrl: String = authStubPort + authLoginStub + path
+    val name: String = friendlyName
+  }
+
   protected val csrfPattern = """<input type="hidden" name="csrfToken" value="([^"]+)"""
 
   def saveCsrfToken = regex(csrfPattern).saveAs("csrfToken")
