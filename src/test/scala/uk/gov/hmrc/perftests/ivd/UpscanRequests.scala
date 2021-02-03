@@ -18,20 +18,21 @@ package uk.gov.hmrc.perftests.ivd
 
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
-import play.api.libs.json.Json
-
-import scala.util.Random
+import io.gatling.http.request.builder.HttpRequestBuilder
 
 object UpscanRequests extends BaseRequests with Pages {
 
-  val schemeHeaders: Map[String, String] =
-    Map("Content-Type" -> "application/json")
+  val upscanCallbackHeaders: Map[String, String] =
+    Map(
+      "Content-Type" -> "application/json",
+      "Csrf-Token"-> s"$${csrfToken}"
+    )
 
-  val upscanPost = http("POST")
-    .post(UploadFileCallBackPage.url)
+  val upscanPost: HttpRequestBuilder = http("Upscan callback success POST")
+    .post(UploadFileCallBackPage.upscanCallBackUrl)
     .body(StringBody(schemeJson))
-    .headers(schemeHeaders)
-    .check(status.is(200))
+    .headers(upscanCallbackHeaders)
+    .check(status.is(204))
 
   def schemeJson: String = {
     s"""

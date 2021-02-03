@@ -35,14 +35,8 @@ trait BaseRequests extends ServicesConfiguration with HttpConfiguration with Che
   //Creates whole paths/relative paths
   class Page (path: String, friendlyName: String = "") {
     val url: String = ivdBaseUrl + contextName + path
+    val upscanCallBackUrl: String = ivdBaseUrl + path
     val relativeUrl: String = contextName + path
-    val authStubUrl: String = authStubPort + authLoginStub + path
-    val name: String = friendlyName
-  }
-
-  class UpscanCallbackPage (path: String, friendlyName: String = "") {
-    val url: String = ivdBaseUrl + path
-    val relativeUrl: String = path
     val authStubUrl: String = authStubPort + authLoginStub + path
     val name: String = friendlyName
   }
