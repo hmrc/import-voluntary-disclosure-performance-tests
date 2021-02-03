@@ -21,7 +21,6 @@ import java.util.concurrent.atomic.AtomicLong
 
 import io.gatling.commons.util.RoundRobin
 import io.gatling.commons.validation.{Failure, Success}
-import io.gatling.core.Predef.elFileBodies.charset
 import io.gatling.core.config.GatlingConfiguration
 import io.gatling.core.feeder
 import io.gatling.core.feeder.{Feeder, Record, SeparatedValuesParser}
@@ -33,7 +32,7 @@ class CsvFeeder2(feederFile: String)(implicit configuration: GatlingConfiguratio
 
   val regularCsvFeeder: Iterator[feeder.Record[String]] = {
     Resource.resolveResource(feederFile) match {
-      case Success(res) => RoundRobin(SeparatedValuesParser.parse(resource = res, columnSeparator = ',', quoteChar = '"', charset = Charset.defaultCharset() ))
+      case Success(res) => RoundRobin(SeparatedValuesParser.parse(resource = res, columnSeparator = ',', quoteChar = '"', charset = Charset.defaultCharset()))
       case Failure(message) => throw new IllegalArgumentException(s"Could not locate feeder file; $message")
     }
   }
@@ -57,7 +56,7 @@ class CsvFeeder2(feederFile: String)(implicit configuration: GatlingConfiguratio
         val formatter = s"%0${length}d"
         val rangeValue = formatter.format(ranges(length).longValue)
 
-        value.replaceAll( """\$\{range-""" + length + """\}""", rangeValue)
+        value.replaceAll("""\$\{range-""" + length + """\}""", rangeValue)
       }
       case _ => value
     }
@@ -81,8 +80,8 @@ class CsvFeeder2(feederFile: String)(implicit configuration: GatlingConfiguratio
 
     record.map {
       case (k, v) => {
-        val vRand: String = v.toString.replaceAll( """\$\{random\}""", randomInt)
-        val vTime: String = vRand.toString.replaceAll( """\$\{currentTime\}""", now)
+        val vRand: String = v.toString.replaceAll("""\$\{random\}""", randomInt)
+        val vTime: String = vRand.toString.replaceAll("""\$\{currentTime\}""", now)
         val vRange: String = replaceRange(vTime)
         (k, vRange)
       }
