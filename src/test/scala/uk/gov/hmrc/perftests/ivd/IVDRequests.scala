@@ -135,4 +135,6 @@ object IVDRequests extends BaseRequests with Pages {
 
   val getSupportingDocumentation: HttpRequestBuilder = buildGetRequest(SupportingDocumentsPage, false)
 
+  val getUploadfile: HttpRequestBuilder = buildGetRequest(UploadFilePage,false)
+
 }
