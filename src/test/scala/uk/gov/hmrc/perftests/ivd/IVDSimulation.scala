@@ -17,13 +17,14 @@
 package uk.gov.hmrc.perftests.ivd
 
 
-import simulation.PerformanceTestRunner2
+//import simulation.PerformanceTestRunner2
+import uk.gov.hmrc.performance.simulation.PerformanceTestRunner
 import uk.gov.hmrc.perftests.ivd.AuthSessionRequests._
-import uk.gov.hmrc.perftests.ivd.IVDRequests.{ getRemoveUploadedFile, _}
+import uk.gov.hmrc.perftests.ivd.IVDRequests.{getRemoveUploadedFile, _}
 import uk.gov.hmrc.perftests.ivd.UpscanRequests.upscanPost
 
 
-class IVDSimulation extends PerformanceTestRunner2 {
+class IVDSimulation extends PerformanceTestRunner {
 
   setup("auth", "Auth login")
     .withRequests(getAuthLogin, authLogin)
