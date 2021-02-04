@@ -41,6 +41,7 @@ trait Pages extends BaseRequests {
   object UploadFilePage extends Page("/disclosure/upload-file", "Upload File")
   object UploadFileSuccessRedirectPage extends Page(s"/disclosure/upload-file/upscan-response?key=$${upscanKey}", "Upload File Success Redirect")
   object UploadFileCallBackPage extends Page("/internal/call-back-from-upscan", "Upload file Callback Success")
+  object UploadFilePollingPage extends Page(s"/disclosure/upload-file/polling?key=$${upscanKey}", "Upload file Polling")
   //  object UploadAnotherFilePage extends Page("/disclosure/upload-another-file", "Upload Another File")
   //  object UploadAnotherFilePage extends Page("/disclosure/upload-another-file", "Upload Another File")
  // object RemoveUploadedFilePage extends Page("/disclosure/remove-file/1", "Remove Uploaded File")

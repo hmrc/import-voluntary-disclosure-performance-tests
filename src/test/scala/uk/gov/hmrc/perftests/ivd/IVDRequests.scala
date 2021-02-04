@@ -24,17 +24,17 @@ import scala.annotation.tailrec
 
 object IVDRequests extends BaseRequests with Pages {
 
-  def buildGetRequest(page: Page, csrf: Boolean = true): HttpRequestBuilder = {
+  def buildGetRequest(page: Page, csrf: Boolean = true, expectedStatus: Int = 200): HttpRequestBuilder = {
     if (csrf.equals(true)) {
       http(s"get ${page.name} Page")
         .get(page.url)
-        .check(status.is(200))
+        .check(status.is(expectedStatus))
         .check(saveCsrfToken)
     }
     else {
       http(s"get ${page.name} Page")
         .get(page.url)
-        .check(status.is(200))
+        .check(status.is(expectedStatus))
     }
   }
 
@@ -138,12 +138,10 @@ object IVDRequests extends BaseRequests with Pages {
   val getUploadfile: HttpRequestBuilder = buildGetRequest(UploadFilePage,false)
 
 
-  val getUploadFileSuccessRedirect: HttpRequestBuilder =
-  http("Upload file Success")
-    .get(UploadFileSuccessRedirectPage.url)
-    .header("Cookie", "mdtp=${mdtpCookie}")
-    .check(status.is(303))
+  val getUploadFileSuccessRedirect: HttpRequestBuilder = buildGetRequest(UploadFileSuccessRedirectPage, false, expectedStatus = 303)
 
+
+  val getUploadFilePolling: HttpRequestBuilder =  buildGetRequest(UploadFilePollingPage, false, expectedStatus = 303)
 
 
 
