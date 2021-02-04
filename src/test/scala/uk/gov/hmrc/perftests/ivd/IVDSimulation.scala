@@ -62,10 +62,9 @@ class IVDSimulation extends PerformanceTestRunner2 {
       getUploadfile,
       getUploadFileSuccessRedirect,
       upscanPost,
-      getUploadFilePolling
-      //      getUploadAnotherFile
-      //      getUploadAnotherFile,
-      //      postUploadAnotherFile,
+      getUploadFilePolling,
+      getUploadAnotherFile,
+      postUploadAnotherFile
       //      getRemoveUploadedFile,
       //      postRemoveUploadedFile
     )
