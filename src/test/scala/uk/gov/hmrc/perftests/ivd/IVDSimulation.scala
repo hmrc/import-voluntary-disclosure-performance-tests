@@ -18,7 +18,8 @@ package uk.gov.hmrc.perftests.ivd
 
 import uk.gov.hmrc.performance.simulation.PerformanceTestRunner
 import uk.gov.hmrc.perftests.ivd.AuthSessionRequests._
-import uk.gov.hmrc.perftests.ivd.IVDRequests._
+import uk.gov.hmrc.perftests.ivd.IVDRequests.{getRemoveUploadedFile, _}
+import uk.gov.hmrc.perftests.ivd.UpscanRequests.upscanPost
 
 class IVDSimulation extends PerformanceTestRunner {
 
@@ -55,7 +56,15 @@ class IVDSimulation extends PerformanceTestRunner {
       postImporterAddress,
       getDeferment,
       postDeferment,
-      getSupportingDocumentation
+      getSupportingDocumentation,
+      getUploadfile,
+      getUploadFileSuccessRedirect,
+      upscanPost,
+      getUploadFilePolling,
+      getUploadAnotherFile,
+      postUploadAnotherFile,
+      getRemoveUploadedFile,
+      postRemoveUploadedFile
     )
 
   runSimulation()
