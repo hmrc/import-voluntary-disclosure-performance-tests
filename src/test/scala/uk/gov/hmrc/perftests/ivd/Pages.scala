@@ -44,5 +44,6 @@ trait Pages extends BaseRequests {
   object UploadFilePollingPage extends Page(s"/disclosure/upload-file/polling?key=$${upscanKey}", "Upload file Polling")
   object UploadAnotherFilePage extends Page("/disclosure/upload-another-file", "Upload Another File")
   object RemoveUploadedFilePage extends Page("/disclosure/remove-file/1", "Remove Uploaded File")
+  object CheckYourAnswersPage extends Page("/disclosure/check-your-answers", "Check Your Answers")
 
 }
