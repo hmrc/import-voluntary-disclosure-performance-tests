@@ -65,7 +65,8 @@ class IVDSimulation extends PerformanceTestRunner {
       postImporterAddress,
       getDeferment,
       postDeferment,
-      getCheckYourAnswers
+      getCheckYourAnswers,
+      getConfirmation
     )
 
   runSimulation()
