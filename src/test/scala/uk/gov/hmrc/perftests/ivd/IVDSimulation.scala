@@ -64,7 +64,8 @@ class IVDSimulation extends PerformanceTestRunner {
       getUploadAnotherFile,
       postUploadAnotherFile,
       getRemoveUploadedFile,
-      postRemoveUploadedFile
+      postRemoveUploadedFile,
+      getBoxGuidancePage
     )
 
   runSimulation()
