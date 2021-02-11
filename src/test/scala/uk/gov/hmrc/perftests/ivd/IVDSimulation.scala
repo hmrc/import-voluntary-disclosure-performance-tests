@@ -50,12 +50,6 @@ class IVDSimulation extends PerformanceTestRunner {
       getExciseDutyDetails,
       postExciseDutyDetails,
       getUnderpaymentSummary,
-      getTraderContactDetails,
-      postTraderContactDetails,
-      getImporterAddress,
-      postImporterAddress,
-      getDeferment,
-      postDeferment,
       getSupportingDocumentation,
       getUploadfile,
       getUploadFileSuccessRedirect,
@@ -65,6 +59,13 @@ class IVDSimulation extends PerformanceTestRunner {
       postUploadAnotherFile,
       getRemoveUploadedFile,
       postRemoveUploadedFile,
+      getTraderContactDetails,
+      postTraderContactDetails,
+      getImporterAddress,
+      postImporterAddress,
+      getDeferment,
+      postDeferment,
+      getCheckYourAnswers,
       getBoxGuidancePage
     )
 
