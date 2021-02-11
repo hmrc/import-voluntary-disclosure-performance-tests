@@ -46,5 +46,6 @@ trait Pages extends BaseRequests {
   object RemoveUploadedFilePage extends Page("/disclosure/remove-file/1", "Remove Uploaded File")
   object CheckYourAnswersPage extends Page("/disclosure/check-your-answers", "Check Your Answers")
   object BoxGuidancePage extends Page("/disclosure/reason-introduction", "Box Guidance")
+  object BoxNumberPage extends Page("/disclosure/box-number", "Box Number")
 
 }
