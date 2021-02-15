@@ -158,4 +158,5 @@ object IVDRequests extends BaseRequests with Pages {
 
   val getBoxItemLevel: HttpRequestBuilder = buildGetRequest(BoxItemLevelPage)
   val postBoxItemLevel: HttpRequestBuilder = buildPostRequest(BoxItemLevelPage, Some(List(("itemNumber", "1"))))
+
 }
