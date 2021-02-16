@@ -19,7 +19,10 @@ package uk.gov.hmrc.perftests.ivd
 import io.gatling.core.Predef._
 import io.gatling.core.check.CheckSupport
 import io.gatling.http.Predef._
+import io.gatling.http.request.builder.HttpRequestBuilder
 import uk.gov.hmrc.performance.conf._
+
+import scala.annotation.tailrec
 
 trait BaseRequests extends ServicesConfiguration with HttpConfiguration with CheckSupport {
 
@@ -56,5 +59,43 @@ trait BaseRequests extends ServicesConfiguration with HttpConfiguration with Che
   //Service Names
   val contextName: String = "/disclose-import-taxes-underpayment"
   val authLoginStub: String = "/auth-login-stub"
+
+  def buildGetRequest(page: Page, csrf: Boolean = true, expectedStatus: Int = 200): HttpRequestBuilder = {
+    if (csrf.equals(true)) {
+      http(s"get ${page.name} Page")
+        .get(page.url)
+        .check(status.is(expectedStatus))
+        .check(saveCsrfToken)
+    }
+    else {
+      http(s"get ${page.name} Page")
+        .get(page.url)
+        .check(status.is(expectedStatus))
+    }
+  }
+
+  def buildPostRequest(page: Page, formParams: Option[List[(String, Any)]] = None): HttpRequestBuilder = {
+    if (formParams.isDefined) {
+      val baseRequest = {
+        http(s"post ${page.name} Page")
+          .post(page.url)
+      }
+
+      @tailrec
+      def addFormParams(formParams: List[(String, Any)], httpRequestBuilder: HttpRequestBuilder): HttpRequestBuilder = {
+        formParams match {
+          case Nil => httpRequestBuilder.formParam("csrfToken", s"$${csrfToken}").check(status.is(303))
+          case ::(head, tl) => addFormParams(tl, httpRequestBuilder.formParam(head._1, head._2))
+        }
+      }
+      addFormParams(formParams.get, baseRequest)
+    }
+    else {
+      http(s"post ${page.name} Page")
+        .post(page.url)
+        .formParam("csrfToken", s"$${csrfToken}")
+        .check(status.is(303))
+    }
+  }
 
 }

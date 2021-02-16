@@ -18,8 +18,9 @@ package uk.gov.hmrc.perftests.ivd
 
 import uk.gov.hmrc.performance.simulation.PerformanceTestRunner
 import uk.gov.hmrc.perftests.ivd.AuthSessionRequests._
-import uk.gov.hmrc.perftests.ivd.IVDRequests.{getBoxNumber, getRemoveUploadedFile, _}
-import uk.gov.hmrc.perftests.ivd.UpscanRequests.upscanPost
+import uk.gov.hmrc.perftests.ivd.BoxUnderpaymentsRequests._
+import uk.gov.hmrc.perftests.ivd.IVDRequests._
+import uk.gov.hmrc.perftests.ivd.UpscanRequests._
 
 class IVDSimulation extends PerformanceTestRunner {
 
@@ -70,6 +71,20 @@ class IVDSimulation extends PerformanceTestRunner {
       //postBoxItemLevel,
       //getEnterBox34ValuePage,
       //postEnterBox34ValuePage,
+      //TODO - Box 35
+      //getBoxNumber,
+      //postBoxNumber35,
+      //getBoxItemLevel,
+      //postBoxItemLevel,
+      //getEnterBox35ValuePage,
+      //postEnterBox35ValuePage,
+      //TODO - Box 36
+      //getBoxNumber,
+      //postBoxNumber36,
+      //getBoxItemLevel,
+      //postBoxItemLevel,
+      //getEnterBox36ValuePage,
+      //postEnterBox36ValuePage,
       //TODO - Box 37
       //getBoxNumber,
       //postBoxNumber37,
@@ -77,6 +92,13 @@ class IVDSimulation extends PerformanceTestRunner {
       //postBoxItemLevel,
       //getEnterBox37ValuePage,
       //postEnterBox37ValuePage,
+      //TODO - Box 38
+      //getBoxNumber,
+      //postBoxNumber38,
+      //getBoxItemLevel,
+      //postBoxItemLevel,
+      //getEnterBox38ValuePage,
+      //postEnterBox38ValuePage,
       //TODO - Box 39
       //getBoxNumber,
       //postBoxNumber39,
@@ -84,6 +106,27 @@ class IVDSimulation extends PerformanceTestRunner {
       //postBoxItemLevel,
       //getEnterBox39ValuePage,
       //postEnterBox39ValuePage,
+      //TODO - Box 41
+      //getBoxNumber,
+      //postBoxNumber41,
+      //getBoxItemLevel,
+      //postBoxItemLevel,
+      //getEnterBox41ValuePage,
+      //postEnterBox41ValuePage,
+      //TODO - Box 42
+      //getBoxNumber,
+      //postBoxNumber42,
+      //getBoxItemLevel,
+      //postBoxItemLevel,
+      //getEnterBox42ValuePage,
+      //postEnterBox42ValuePage,
+      //TODO - Box 43
+      //getBoxNumber,
+      //postBoxNumber43,
+      //getBoxItemLevel,
+      //postBoxItemLevel,
+      //getEnterBox43ValuePage,
+      //postEnterBox43ValuePage,
       //TODO - Box 45
       //getBoxNumber,
       //postBoxNumber45,
@@ -91,6 +134,13 @@ class IVDSimulation extends PerformanceTestRunner {
       //postBoxItemLevel,
       //getEnterBox45ValuePage,
       //postEnterBox45ValuePage,
+      //TODO - Box 46
+      //getBoxNumber,
+      //postBoxNumber46,
+      //getBoxItemLevel,
+      //postBoxItemLevel,
+      //getEnterBox46ValuePage,
+      //postEnterBox46ValuePage,
       //TODO - Box 62
       getBoxNumber,
       postBoxNumber62,
