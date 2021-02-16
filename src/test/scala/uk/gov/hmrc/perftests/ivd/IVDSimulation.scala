@@ -18,7 +18,7 @@ package uk.gov.hmrc.perftests.ivd
 
 import uk.gov.hmrc.performance.simulation.PerformanceTestRunner
 import uk.gov.hmrc.perftests.ivd.AuthSessionRequests._
-import uk.gov.hmrc.perftests.ivd.IVDRequests.{getRemoveUploadedFile, _}
+import uk.gov.hmrc.perftests.ivd.IVDRequests.{getBoxNumber, getRemoveUploadedFile, _}
 import uk.gov.hmrc.perftests.ivd.UpscanRequests.upscanPost
 
 class IVDSimulation extends PerformanceTestRunner {
@@ -68,10 +68,71 @@ class IVDSimulation extends PerformanceTestRunner {
       getCheckYourAnswers,
       getConfirmation,
       getBoxGuidancePage,
+      //TODO - Box 22
       getBoxNumber,
-      postBoxNumber,
+      postBoxNumber22,
+      getEnterBox22ValuePage,
+      postEnterBox22ValuePage,
+      //TODO - Box 33
+      getBoxNumber,
+      postBoxNumber33,
       getBoxItemLevel,
-      postBoxItemLevel
+      postBoxItemLevel,
+      getEnterBox33ValuePage,
+      postEnterBox33ValuePage,
+      //TODO - Box 34
+//      getBoxNumber,
+//      postBoxNumber34,
+//      getBoxItemLevel,
+//      postBoxItemLevel,
+//      getEnterBox34ValuePage,
+//      postEnterBox34ValuePage,
+      //TODO - Box 37
+//      getBoxNumber,
+//      postBoxNumber37,
+//      getBoxItemLevel,
+//      postBoxItemLevel,
+//      getEnterBox37ValuePage,
+//      postEnterBox37ValuePage,
+      //TODO - Box 39
+//      getBoxNumber,
+//      postBoxNumber39,
+//      getBoxItemLevel,
+//      postBoxItemLevel,
+//      getEnterBox39ValuePage,
+//      postEnterBox39ValuePage,
+      //TODO - Box 45
+//      getBoxNumber,
+//      postBoxNumber45,
+//      getBoxItemLevel,
+//      postBoxItemLevel,
+//      getEnterBox45ValuePage,
+//      postEnterBox45ValuePage,
+      //TODO - Box 62
+      getBoxNumber,
+      postBoxNumber62,
+      getEnterBox62ValuePage,
+      postEnterBox62ValuePage
+      //TODO - Box 63
+//      getBoxNumber,
+//      postBoxNumber63,
+//      getEnterBox63ValuePage,
+//      postEnterBox63ValuePage,
+      //TODO - Box 66
+//      getBoxNumber,
+//      postBoxNumber66,
+//      getEnterBox66ValuePage,
+//      postEnterBox66ValuePage,
+      //TODO - Box 67
+//      getBoxNumber,
+//      postBoxNumber67,
+//      getEnterBox67ValuePage,
+//      postEnterBox67ValuePage,
+      //TODO - Box 68
+//      getBoxNumber,
+//      postBoxNumber68,
+//      getEnterBox68ValuePage,
+//      postEnterBox68ValuePage
     )
 
   runSimulation()

@@ -49,5 +49,16 @@ trait Pages extends BaseRequests {
   object BoxGuidancePage extends Page("/disclosure/reason-introduction", "Box Guidance")
   object BoxNumberPage extends Page("/disclosure/box-number", "Box Number")
   object BoxItemLevelPage extends Page("/disclosure/item-number", "Box Item Level")
+  object EnterBox22ValuePage extends Page("/disclosure/box-22-currency-total-invoice-amendment", "Enter Box 22")
+  object EnterBox33ValuePage extends Page("/disclosure/box-33-commodity-code-amendment", "Enter Box 33")
+  object EnterBox34ValuePage extends Page("/disclosure/box-34-origin-country-code-amendment", "Enter Box 34")
+  object EnterBox37ValuePage extends Page("/disclosure/box-37-customs-procedure-code-amendment", "Enter Box 37")
+  object EnterBox39ValuePage extends Page("/disclosure/box-39-quota-amendment", "Enter Box 39")
+  object EnterBox45ValuePage extends Page("/disclosure/box-45-adjustment-amendment", "Enter Box 45")
+  object EnterBox62ValuePage extends Page("/disclosure/box-62-air-transport-costs-amendment", "Enter Box 62")
+  object EnterBox63ValuePage extends Page("/disclosure/box-63-awb-freight-costs-amendment", "Enter Box 63")
+  object EnterBox66ValuePage extends Page("/disclosure/box-66-insurance-amendment", "Enter Box 66")
+  object EnterBox67ValuePage extends Page("/disclosure/box-67-other-charges-deductions-amendment", "Enter Box 67")
+  object EnterBox68ValuePage extends Page("/disclosure/box-68-adjustment-vat-value-amendment", "Enter Box 68")
 
 }

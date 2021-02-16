@@ -154,8 +154,63 @@ object IVDRequests extends BaseRequests with Pages {
   val getBoxGuidancePage: HttpRequestBuilder = buildGetRequest(BoxGuidancePage,false)
 
   val getBoxNumber: HttpRequestBuilder = buildGetRequest(BoxNumberPage)
-  val postBoxNumber: HttpRequestBuilder = buildPostRequest(BoxNumberPage, Some(List(("value", "33"))))
+  val postBoxNumber22: HttpRequestBuilder = buildPostRequest(BoxNumberPage, Some(List(("value", "22"))))
+  val postBoxNumber33: HttpRequestBuilder = buildPostRequest(BoxNumberPage, Some(List(("value", "33"))))
+  val postBoxNumber34: HttpRequestBuilder = buildPostRequest(BoxNumberPage, Some(List(("value", "34"))))
+  val postBoxNumber37: HttpRequestBuilder = buildPostRequest(BoxNumberPage, Some(List(("value", "37"))))
+  val postBoxNumber39: HttpRequestBuilder = buildPostRequest(BoxNumberPage, Some(List(("value", "39"))))
+  val postBoxNumber45: HttpRequestBuilder = buildPostRequest(BoxNumberPage, Some(List(("value", "45"))))
+  val postBoxNumber62: HttpRequestBuilder = buildPostRequest(BoxNumberPage, Some(List(("value", "62"))))
+  val postBoxNumber63: HttpRequestBuilder = buildPostRequest(BoxNumberPage, Some(List(("value", "63"))))
+  val postBoxNumber66: HttpRequestBuilder = buildPostRequest(BoxNumberPage, Some(List(("value", "66"))))
+  val postBoxNumber67: HttpRequestBuilder = buildPostRequest(BoxNumberPage, Some(List(("value", "67"))))
+  val postBoxNumber68: HttpRequestBuilder = buildPostRequest(BoxNumberPage, Some(List(("value", "68"))))
 
   val getBoxItemLevel: HttpRequestBuilder = buildGetRequest(BoxItemLevelPage)
   val postBoxItemLevel: HttpRequestBuilder = buildPostRequest(BoxItemLevelPage, Some(List(("itemNumber", "1"))))
+
+  val getEnterBox22ValuePage: HttpRequestBuilder = buildGetRequest(EnterBox22ValuePage)
+  val postEnterBox22ValuePage: HttpRequestBuilder = buildPostRequest(EnterBox22ValuePage, Some(List(
+    ("original", "EUR125.00"), ("amended", "GBP125.00"))))
+
+  val getEnterBox33ValuePage: HttpRequestBuilder = buildGetRequest(EnterBox33ValuePage)
+  val postEnterBox33ValuePage: HttpRequestBuilder = buildPostRequest(EnterBox33ValuePage, Some(List(
+    ("original", "1234567891ABCD"), ("amended", "1987654321DCBA"))))
+
+  val getEnterBox34ValuePage: HttpRequestBuilder = buildGetRequest(EnterBox34ValuePage)
+  val postEnterBox34ValuePage: HttpRequestBuilder = buildPostRequest(EnterBox34ValuePage, Some(List(
+    ("original", "CY"), ("amended", "GB"))))
+
+  val getEnterBox37ValuePage: HttpRequestBuilder = buildGetRequest(EnterBox37ValuePage)
+  val postEnterBox37ValuePage: HttpRequestBuilder = buildPostRequest(EnterBox37ValuePage, Some(List(
+    ("original", "1234A67"), ("amended", "7654C21"))))
+
+  val getEnterBox39ValuePage: HttpRequestBuilder = buildGetRequest(EnterBox39ValuePage)
+  val postEnterBox39ValuePage: HttpRequestBuilder = buildPostRequest(EnterBox39ValuePage, Some(List(
+    ("original", "ABC1234"), ("amended", "DEF1234"))))
+
+  val getEnterBox45ValuePage: HttpRequestBuilder = buildGetRequest(EnterBox45ValuePage)
+  val postEnterBox45ValuePage: HttpRequestBuilder = buildPostRequest(EnterBox45ValuePage, Some(List(
+    ("original", "A12.5"), ("amended", "B12.5"))))
+
+  val getEnterBox62ValuePage: HttpRequestBuilder = buildGetRequest(EnterBox62ValuePage)
+  val postEnterBox62ValuePage: HttpRequestBuilder = buildPostRequest(EnterBox62ValuePage, Some(List(
+    ("original", "EUR125.00"), ("amended", "GBP125.00"))))
+
+  val getEnterBox63ValuePage: HttpRequestBuilder = buildGetRequest(EnterBox63ValuePage)
+  val postEnterBox63ValuePage: HttpRequestBuilder = buildPostRequest(EnterBox63ValuePage, Some(List(
+    ("original", "EUR125.00"), ("amended", "GBP125.00"))))
+
+  val getEnterBox66ValuePage: HttpRequestBuilder = buildGetRequest(EnterBox66ValuePage)
+  val postEnterBox66ValuePage: HttpRequestBuilder = buildPostRequest(EnterBox66ValuePage, Some(List(
+    ("original", "EUR125.00"), ("amended", "GBP125.00"))))
+
+  val getEnterBox67ValuePage: HttpRequestBuilder = buildGetRequest(EnterBox67ValuePage)
+  val postEnterBox67ValuePage: HttpRequestBuilder = buildPostRequest(EnterBox67ValuePage, Some(List(
+    ("original", "EUR125.00"), ("amended", "GBP125.00"))))
+
+  val getEnterBox68ValuePage: HttpRequestBuilder = buildGetRequest(EnterBox68ValuePage)
+  val postEnterBox68ValuePage: HttpRequestBuilder = buildPostRequest(EnterBox68ValuePage, Some(List(
+    ("original", "EUR125.00"), ("amended", "GBP125.00"))))
+
 }
