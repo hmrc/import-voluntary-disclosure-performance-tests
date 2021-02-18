@@ -20,47 +20,7 @@ import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 import io.gatling.http.request.builder.HttpRequestBuilder
 
-import scala.annotation.tailrec
-
 object IVDRequests extends BaseRequests with Pages {
-
-  def buildGetRequest(page: Page, csrf: Boolean = true, expectedStatus: Int = 200): HttpRequestBuilder = {
-    if (csrf.equals(true)) {
-      http(s"get ${page.name} Page")
-        .get(page.url)
-        .check(status.is(expectedStatus))
-        .check(saveCsrfToken)
-    }
-    else {
-      http(s"get ${page.name} Page")
-        .get(page.url)
-        .check(status.is(expectedStatus))
-    }
-  }
-
-  def buildPostRequest(page: Page, formParams: Option[List[(String, Any)]] = None): HttpRequestBuilder = {
-    if (formParams.isDefined) {
-      val baseRequest = {
-        http(s"post ${page.name} Page")
-          .post(page.url)
-      }
-
-      @tailrec
-      def addFormParams(formParams: List[(String, Any)], httpRequestBuilder: HttpRequestBuilder): HttpRequestBuilder = {
-        formParams match {
-          case Nil => httpRequestBuilder.formParam("csrfToken", s"$${csrfToken}").check(status.is(303))
-          case ::(head, tl) => addFormParams(tl, httpRequestBuilder.formParam(head._1, head._2))
-        }
-      }
-      addFormParams(formParams.get, baseRequest)
-    }
-    else {
-      http(s"post ${page.name} Page")
-        .post(page.url)
-        .formParam("csrfToken", s"$${csrfToken}")
-        .check(status.is(303))
-    }
-  }
 
   val getIndexPage: HttpRequestBuilder =
     http("Initial get after auth to force redirect")
@@ -150,13 +110,5 @@ object IVDRequests extends BaseRequests with Pages {
   val getCheckYourAnswers: HttpRequestBuilder = buildGetRequest(CheckYourAnswersPage, false)
 
   val getConfirmation: HttpRequestBuilder = buildGetRequest(ConfirmationPage, false)
-
-  val getBoxGuidancePage: HttpRequestBuilder = buildGetRequest(BoxGuidancePage,false)
-
-  val getBoxNumber: HttpRequestBuilder = buildGetRequest(BoxNumberPage)
-  val postBoxNumber: HttpRequestBuilder = buildPostRequest(BoxNumberPage, Some(List(("value", "33"))))
-
-  val getBoxItemLevel: HttpRequestBuilder = buildGetRequest(BoxItemLevelPage)
-  val postBoxItemLevel: HttpRequestBuilder = buildPostRequest(BoxItemLevelPage, Some(List(("itemNumber", "1"))))
 
 }
