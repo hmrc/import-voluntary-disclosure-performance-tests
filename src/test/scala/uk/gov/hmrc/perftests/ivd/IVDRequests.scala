@@ -49,9 +49,6 @@ object IVDRequests extends BaseRequests with Pages {
   val getEnterCustomsProcedureCode: HttpRequestBuilder = buildGetRequest(EnterCustomsProcedureCodePage)
   val postEnterCustomsProcedureCode: HttpRequestBuilder = buildPostRequest(EnterCustomsProcedureCodePage, Some(List(("cpc", "1234567"))))
 
-  val getCustomsProcedureCode: HttpRequestBuilder = buildGetRequest(CustomsProcedureCodePage)
-  val postCustomsProcedureCode: HttpRequestBuilder = buildPostRequest(CustomsProcedureCodePage, Some(List(("value", "false"))))
-
   val getUnderpaymentType: HttpRequestBuilder = buildGetRequest(UnderpaymentTypePage)
   val postUnderpaymentType: HttpRequestBuilder = buildPostRequest(UnderpaymentTypePage,
     Some(List(
