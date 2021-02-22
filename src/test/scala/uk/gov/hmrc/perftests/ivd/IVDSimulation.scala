@@ -174,7 +174,8 @@ class IVDSimulation extends PerformanceTestRunner {
       //postBoxNumber68,
       //getEnterBox68ValuePage,
       //postEnterBox68ValuePage,
-      getUnderpaymentBoxConfirmationPage
+      getUnderpaymentBoxConfirmationPage,
+      postUnderpaymentBoxConfirmationPage,
     )
 
   setup("importerSectionFive", "Importer Flow Section 5 - Upload File")
