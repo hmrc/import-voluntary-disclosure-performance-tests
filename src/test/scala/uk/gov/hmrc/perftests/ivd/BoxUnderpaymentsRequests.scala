@@ -19,6 +19,7 @@ package uk.gov.hmrc.perftests.ivd
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 import io.gatling.http.request.builder.HttpRequestBuilder
+import uk.gov.hmrc.perftests.ivd.IVDRequests.{buildGetRequest, buildPostRequest}
 
 import scala.annotation.tailrec
 
@@ -121,5 +122,9 @@ object BoxUnderpaymentsRequests extends BaseRequests with Pages {
     ("original", "EUR125.00"), ("amended", "GBP125.00"))))
 
   val getUnderpaymentBoxConfirmationPage: HttpRequestBuilder = buildGetRequest(UnderpaymentBoxConfirmationPage, csrf = false)
-  val postUnderpaymentBoxConfirmationPage: HttpRequestBuilder = buildGetRequest(UnderpaymentBoxConfirmationPage)
+  val postUnderpaymentBoxConfirmationPage: HttpRequestBuilder = buildPostRequest(UnderpaymentBoxConfirmationPage)
+
+  val getBoxReasonSummary: HttpRequestBuilder = buildGetRequest(BoxReasonSummaryPage, false)
+  val postBoxReasonSummary: HttpRequestBuilder = buildPostRequest(BoxReasonSummaryPage, Some(List(("value", "false"))))
+
 }

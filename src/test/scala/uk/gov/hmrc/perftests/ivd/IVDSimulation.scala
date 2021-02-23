@@ -55,7 +55,7 @@ class IVDSimulation extends PerformanceTestRunner {
       getUnderpaymentSummary,
     )
 
-  setup("importerSectionFour", "Importer Flow Section 4 - Underpayment Reason")
+  setup("importerSectionFour", "Importer Flow Section 4 - Underpayment Reasons")
     .withRequests(
       getBoxGuidancePage,
       //TODO - Box 22
@@ -176,11 +176,11 @@ class IVDSimulation extends PerformanceTestRunner {
       postUnderpaymentBoxConfirmationPage,
       getBoxReasonSummary,
       postBoxReasonSummary,
+
     )
 
   setup("importerSectionFive", "Importer Flow Section 5 - Upload File")
     .withRequests(
-      getSupportingDocumentation,
       getUploadfile,
       getUploadFileSuccessRedirect,
       upscanPost,

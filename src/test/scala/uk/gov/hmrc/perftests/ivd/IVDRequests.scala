@@ -108,7 +108,5 @@ object IVDRequests extends BaseRequests with Pages {
 
   val getConfirmation: HttpRequestBuilder = buildGetRequest(ConfirmationPage, false)
 
-  val getBoxReasonSummary: HttpRequestBuilder = buildGetRequest(BoxReasonSummaryPage, false)
-  val postBoxReasonSummary: HttpRequestBuilder = buildPostRequest(BoxReasonSummaryPage, Some(List(("value", "false"))))
 
 }
