@@ -120,4 +120,5 @@ object BoxUnderpaymentsRequests extends BaseRequests with Pages {
   val postEnterBox68ValuePage: HttpRequestBuilder = buildPostRequest(EnterBox68ValuePage, Some(List(
     ("original", "EUR125.00"), ("amended", "GBP125.00"))))
 
+  val getUnderpaymentBoxConfirmationPage: HttpRequestBuilder = buildGetRequest(UnderpaymentBoxConfirmationPage, csrf = false)
 }
