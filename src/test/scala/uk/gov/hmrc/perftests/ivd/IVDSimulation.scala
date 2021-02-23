@@ -173,6 +173,7 @@ class IVDSimulation extends PerformanceTestRunner {
       //getEnterBox68ValuePage,
       //postEnterBox68ValuePage,
       getUnderpaymentBoxConfirmationPage,
+      postUnderpaymentBoxConfirmationPage,
       getBoxReasonSummary,
       postBoxReasonSummary,
     )
