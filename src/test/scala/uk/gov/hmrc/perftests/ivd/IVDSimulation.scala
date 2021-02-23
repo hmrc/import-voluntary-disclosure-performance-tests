@@ -27,7 +27,7 @@ class IVDSimulation extends PerformanceTestRunner {
   setup("auth", "Auth login")
     .withRequests(getAuthLogin, authLogin)
 
-  setup("importVoluntaryDisclosure", "Import Voluntary Disclosure")
+  setup("importerSectionTwo", "Importer Flow Section 2 - Entry Details")
     .withRequests(
       getIndexPage,
       getUserType,
@@ -40,6 +40,10 @@ class IVDSimulation extends PerformanceTestRunner {
       postAcceptanceDate,
       getEnterCustomsProcedureCode,
       postEnterCustomsProcedureCode,
+    )
+
+  setup("importerSectionThree", "Importer Flow Section 3 - Underpayment Amount")
+    .withRequests(
       getUnderpaymentType,
       postUnderpaymentType,
       getCustomsDuty,
@@ -49,6 +53,10 @@ class IVDSimulation extends PerformanceTestRunner {
       getExciseDutyDetails,
       postExciseDutyDetails,
       getUnderpaymentSummary,
+    )
+
+  setup("importerSectionFour", "a")
+    .withRequests(
       getBoxGuidancePage,
       //TODO - Box 22
       getBoxNumber,
@@ -163,7 +171,12 @@ class IVDSimulation extends PerformanceTestRunner {
       //getBoxNumber,
       //postBoxNumber68,
       //getEnterBox68ValuePage,
-      //postEnterBox68ValuePage
+      //postEnterBox68ValuePage,
+      getUnderpaymentBoxConfirmationPage,
+    )
+
+  setup("importerSectionFive", "Importer Flow Section 5 - Upload File")
+    .withRequests(
       getSupportingDocumentation,
       getUploadfile,
       getUploadFileSuccessRedirect,
@@ -173,12 +186,24 @@ class IVDSimulation extends PerformanceTestRunner {
       postUploadAnotherFile,
       getRemoveUploadedFile,
       postRemoveUploadedFile,
+    )
+
+  setup("importerSectionSix", "Importer Flow Section 6 - Contact Details")
+    .withRequests(
       getTraderContactDetails,
       postTraderContactDetails,
       getImporterAddress,
       postImporterAddress,
+    )
+
+  setup("importerSectionSeven", "Importer Flow Section 7 - Payment Information")
+    .withRequests(
       getDeferment,
       postDeferment,
+    )
+
+  setup("importerSectionEight", "Importer Flow Section 8 - CYA and Submit")
+    .withRequests(
       getCheckYourAnswers,
       getConfirmation
     )
