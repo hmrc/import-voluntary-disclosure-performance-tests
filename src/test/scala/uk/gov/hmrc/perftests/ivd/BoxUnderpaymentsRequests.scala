@@ -121,4 +121,5 @@ object BoxUnderpaymentsRequests extends BaseRequests with Pages {
     ("original", "EUR125.00"), ("amended", "GBP125.00"))))
 
   val getUnderpaymentBoxConfirmationPage: HttpRequestBuilder = buildGetRequest(UnderpaymentBoxConfirmationPage, csrf = false)
+  val postUnderpaymentBoxConfirmationPage: HttpRequestBuilder = buildGetRequest(UnderpaymentBoxConfirmationPage)
 }
