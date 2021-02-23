@@ -40,8 +40,6 @@ class IVDSimulation extends PerformanceTestRunner {
       postAcceptanceDate,
       getEnterCustomsProcedureCode,
       postEnterCustomsProcedureCode,
-      getCustomsProcedureCode,
-      postCustomsProcedureCode,
     )
 
   setup("importerSectionThree", "Importer Flow Section 3 - Underpayment Amount")
@@ -57,7 +55,7 @@ class IVDSimulation extends PerformanceTestRunner {
       getUnderpaymentSummary,
     )
 
-  setup("importerSectionFour", "Importer Flow Section 4 - Underpayment Reason")
+  setup("importerSectionFour", "a")
     .withRequests(
       getBoxGuidancePage,
       //TODO - Box 22
@@ -175,7 +173,6 @@ class IVDSimulation extends PerformanceTestRunner {
       //getEnterBox68ValuePage,
       //postEnterBox68ValuePage,
       getUnderpaymentBoxConfirmationPage,
-      postUnderpaymentBoxConfirmationPage,
     )
 
   setup("importerSectionFive", "Importer Flow Section 5 - Upload File")
