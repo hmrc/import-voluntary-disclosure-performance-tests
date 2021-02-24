@@ -208,5 +208,11 @@ class IVDSimulation extends PerformanceTestRunner {
       getConfirmation
     )
 
+  setup("importerSectionNine", "Importer Flow Section 9 - Represenative")
+    .withRequests(
+      getRepresentativeName,
+      postRepresentativeName
+    )
+
   runSimulation()
 }
