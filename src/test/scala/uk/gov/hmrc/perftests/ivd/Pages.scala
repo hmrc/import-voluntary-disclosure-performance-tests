@@ -67,5 +67,6 @@ trait Pages extends BaseRequests {
   object EnterBox67ValuePage extends Page("/disclosure/box-67-other-charges-deductions-amendment", "Enter Box 67")
   object EnterBox68ValuePage extends Page("/disclosure/box-68-adjustment-vat-value-amendment", "Enter Box 68")
   object UnderpaymentBoxConfirmationPage extends Page("/disclosure/confirm-reason-details", "Box Underpayment Confirmation")
+  object BoxReasonSummaryPage extends Page("/disclosure/underpayment-reason-summary", "Box Reason Summary Page")
 
 }
