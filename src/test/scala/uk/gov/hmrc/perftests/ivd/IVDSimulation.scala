@@ -176,6 +176,8 @@ class IVDSimulation extends PerformanceTestRunner {
       postUnderpaymentBoxConfirmationPage,
       getBoxReasonSummary,
       postBoxReasonSummary,
+      getHasFurtherInformation,
+      postHasFurtherInformation
 
     )
 
