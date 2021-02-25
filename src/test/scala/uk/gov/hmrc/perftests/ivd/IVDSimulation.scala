@@ -220,7 +220,9 @@ class IVDSimulation extends PerformanceTestRunner {
       getUserType,
       postUserTypeRepresentative,
       getRepresentativeName,
-      postRepresentativeName
+      postRepresentativeName,
+      getImporterEORIExists,
+      postImporterEORIExists
     )
 
   runSimulation()
