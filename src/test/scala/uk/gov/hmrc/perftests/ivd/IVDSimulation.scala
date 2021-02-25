@@ -31,7 +31,7 @@ class IVDSimulation extends PerformanceTestRunner {
     .withRequests(
       getIndexPage,
       getUserType,
-      postUserType,
+      postUserTypeImporter,
       getNumberOfEntries,
       postNumberOfEntries,
       getEntryDetails,
@@ -55,7 +55,7 @@ class IVDSimulation extends PerformanceTestRunner {
       getUnderpaymentSummary,
     )
 
-  setup("importerSectionFour", "a")
+  setup("importerSectionFour", "Importer Flow Section 4 - Underpayment Reasons")
     .withRequests(
       getBoxGuidancePage,
       //TODO - Box 22
@@ -173,6 +173,12 @@ class IVDSimulation extends PerformanceTestRunner {
       //getEnterBox68ValuePage,
       //postEnterBox68ValuePage,
       getUnderpaymentBoxConfirmationPage,
+      postUnderpaymentBoxConfirmationPage,
+      getBoxReasonSummary,
+      postBoxReasonSummary,
+      getHasFurtherInformation,
+      postHasFurtherInformation
+
     )
 
   setup("importerSectionFive", "Importer Flow Section 5 - Upload File")
@@ -208,8 +214,11 @@ class IVDSimulation extends PerformanceTestRunner {
       getConfirmation
     )
 
-  setup("importerSectionNine", "Importer Flow Section 9 - Represenative")
+  setup("representativeSectionTwo", "Representative Flow Section 2 - Entry Details")
     .withRequests(
+      getIndexPage,
+      getUserType,
+      postUserTypeRepresentative,
       getRepresentativeName,
       postRepresentativeName
     )
