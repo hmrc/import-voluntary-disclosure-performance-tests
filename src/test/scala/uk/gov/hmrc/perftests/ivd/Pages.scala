@@ -70,4 +70,6 @@ trait Pages extends BaseRequests {
   object BoxReasonSummaryPage extends Page("/disclosure/underpayment-reason-summary", "Box Reason Summary")
   object HasFurtherInformationPage extends Page("/disclosure/provide-information-option", "Have Further Information")
 
+  object RepresentativeNamePage extends Page("/disclosure/importer-name", "Importer's Name")
+
 }

@@ -31,7 +31,7 @@ class IVDSimulation extends PerformanceTestRunner {
     .withRequests(
       getIndexPage,
       getUserType,
-      postUserType,
+      postUserTypeImporter,
       getNumberOfEntries,
       postNumberOfEntries,
       getEntryDetails,
@@ -212,6 +212,15 @@ class IVDSimulation extends PerformanceTestRunner {
     .withRequests(
       getCheckYourAnswers,
       getConfirmation
+    )
+
+  setup("representativeSectionTwo", "Representative Flow Section 2 - Entry Details")
+    .withRequests(
+      getIndexPage,
+      getUserType,
+      postUserTypeRepresentative,
+      getRepresentativeName,
+      postRepresentativeName
     )
 
   runSimulation()

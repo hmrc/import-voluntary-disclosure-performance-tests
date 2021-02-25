@@ -29,7 +29,8 @@ object IVDRequests extends BaseRequests with Pages {
       .check(status.is(303))
 
   val getUserType: HttpRequestBuilder = buildGetRequest(UserTypePage)
-  val postUserType: HttpRequestBuilder = buildPostRequest(UserTypePage, Some(List(("value","importer"))))
+  val postUserTypeImporter: HttpRequestBuilder = buildPostRequest(UserTypePage, Some(List(("value","importer"))))
+  val postUserTypeRepresentative: HttpRequestBuilder = buildPostRequest(UserTypePage, Some(List(("value","representative"))))
 
   val getNumberOfEntries: HttpRequestBuilder = buildGetRequest(NumberOfEntriesPage)
   val postNumberOfEntries: HttpRequestBuilder = buildPostRequest(NumberOfEntriesPage, Some(List(("value", "oneEntry"))))
@@ -107,6 +108,9 @@ object IVDRequests extends BaseRequests with Pages {
   val getCheckYourAnswers: HttpRequestBuilder = buildGetRequest(CheckYourAnswersPage, false)
 
   val getConfirmation: HttpRequestBuilder = buildGetRequest(ConfirmationPage, false)
+
+  val getRepresentativeName: HttpRequestBuilder = buildGetRequest(RepresentativeNamePage,false)
+  val postRepresentativeName: HttpRequestBuilder = buildPostRequest(RepresentativeNamePage,Some(List(("fullName", "Test User"))))
 
   val getHasFurtherInformation: HttpRequestBuilder = buildGetRequest(HasFurtherInformationPage)
   val postHasFurtherInformation: HttpRequestBuilder = buildPostRequest(HasFurtherInformationPage, Some(List(("value", "true"))))
