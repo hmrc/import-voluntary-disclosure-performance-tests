@@ -69,8 +69,11 @@ trait Pages extends BaseRequests {
   object UnderpaymentBoxConfirmationPage extends Page("/disclosure/confirm-reason-details", "Box Underpayment Confirmation")
   object BoxReasonSummaryPage extends Page("/disclosure/underpayment-reason-summary", "Box Reason Summary")
   object HasFurtherInformationPage extends Page("/disclosure/provide-information-option", "Have Further Information")
-  object ImporterEORIExistsPage extends Page("/disclosure/importer-eori-number-exists","Import EORI Exists")
 
   object RepresentativeNamePage extends Page("/disclosure/importer-name", "Importer's Name")
+  object ImporterEORIExistsPage extends Page("/disclosure/importer-eori-number-exists","Import EORI Exists")
+  object EnterImportersEORIPage extends Page("/disclosure/importer-eori-number","Enter Import EORI Number")
+
+
 
 }
