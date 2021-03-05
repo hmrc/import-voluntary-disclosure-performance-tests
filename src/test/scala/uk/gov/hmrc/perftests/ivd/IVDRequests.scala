@@ -115,6 +115,9 @@ object IVDRequests extends BaseRequests with Pages {
   val getHasFurtherInformation: HttpRequestBuilder = buildGetRequest(HasFurtherInformationPage)
   val postHasFurtherInformation: HttpRequestBuilder = buildPostRequest(HasFurtherInformationPage, Some(List(("value", "true"))))
 
+  val getMoreInformation: HttpRequestBuilder = buildGetRequest(MoreInformationPage)
+  val postMoreInformation: HttpRequestBuilder = buildPostRequest(MoreInformationPage, Some(List(("value", "text"))))
+
   val getImporterEORIExists: HttpRequestBuilder = buildGetRequest(ImporterEORIExistsPage)
   val postImporterEORIExists: HttpRequestBuilder = buildPostRequest(ImporterEORIExistsPage, Some(List(("value", "true"))))
 
