@@ -177,7 +177,9 @@ class IVDSimulation extends PerformanceTestRunner {
       getBoxReasonSummary,
       postBoxReasonSummary,
       getHasFurtherInformation,
-      postHasFurtherInformation
+      postHasFurtherInformation,
+      getMoreInformation,
+      postMoreInformation
 
     )
 
