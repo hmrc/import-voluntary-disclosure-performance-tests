@@ -179,8 +179,8 @@ class IVDSimulation extends PerformanceTestRunner {
       getHasFurtherInformation,
       postHasFurtherInformation,
       getMoreInformation,
-      postMoreInformation
-
+      postMoreInformation,
+      getConfirmEORINumber
     )
 
   setup("importerSectionFive", "Importer Flow Section 5 - Upload File")
