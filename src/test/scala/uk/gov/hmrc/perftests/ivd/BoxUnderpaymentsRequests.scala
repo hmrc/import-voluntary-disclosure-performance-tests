@@ -34,6 +34,7 @@ object BoxUnderpaymentsRequests extends BaseRequests with Pages {
   val postBoxNumber35: HttpRequestBuilder = buildPostRequest(BoxNumberPage, Some(List(("value", "35"))))
   val postBoxNumber36: HttpRequestBuilder = buildPostRequest(BoxNumberPage, Some(List(("value", "36"))))
   val postBoxNumber37: HttpRequestBuilder = buildPostRequest(BoxNumberPage, Some(List(("value", "37"))))
+  val postBoxNumber38: HttpRequestBuilder = buildPostRequest(BoxNumberPage, Some(List(("value", "38"))))
   val postBoxNumber39: HttpRequestBuilder = buildPostRequest(BoxNumberPage, Some(List(("value", "39"))))
   val postBoxNumber41: HttpRequestBuilder = buildPostRequest(BoxNumberPage, Some(List(("value", "41"))))
   val postBoxNumber42: HttpRequestBuilder = buildPostRequest(BoxNumberPage, Some(List(("value", "42"))))
