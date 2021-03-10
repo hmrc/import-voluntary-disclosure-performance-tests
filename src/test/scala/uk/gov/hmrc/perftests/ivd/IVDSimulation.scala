@@ -106,12 +106,12 @@ class IVDSimulation extends PerformanceTestRunner {
       getEnterBox38ValuePage,
       postEnterBox38ValuePage,
       //TODO - Box 39
-      //getBoxNumber,
-      //postBoxNumber39,
-      //getBoxItemLevel,
-      //postBoxItemLevel,
-      //getEnterBox39ValuePage,
-      //postEnterBox39ValuePage,
+      getBoxNumber,
+      postBoxNumber39,
+      getBoxItemLevel,
+      postBoxItemLevel,
+      getEnterBox39ValuePage,
+      postEnterBox39ValuePage,
       //TODO - Box 41
       //getBoxNumber,
       //postBoxNumber41,
