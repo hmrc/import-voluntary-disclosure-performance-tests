@@ -34,7 +34,7 @@ trait Pages extends BaseRequests {
   object ExciseDutyDetailsPage extends Page("/disclosure/excise-duty-details", "Excise Duty Details")
   object UnderpaymentSummaryPage extends Page("/disclosure/underpayment-amount-summary", "Underpayment Summary")
   object TraderContactDetailsPage extends Page("/disclosure/your-contact-details", "Trader Contact Details")
-  object DefermentPage extends Page("/disclosure/paying-by-deferment", "Deferment")
+  object DefermentPage extends Page("/disclosure/how-will-you-pay", "Deferment")
   object SupportingDocumentsPage extends Page("/disclosure/supporting-documentation-format", "Supporting Documentation Formats Info")
   object ImporterAddressPage extends Page("/disclosure/address-correct", "Importer Address")
   object UploadFilePage extends Page("/disclosure/upload-file", "Upload File")
