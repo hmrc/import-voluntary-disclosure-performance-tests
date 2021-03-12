@@ -80,7 +80,7 @@ object BoxUnderpaymentsRequests extends BaseRequests with Pages {
 
   val getEnterBox39ValuePage: HttpRequestBuilder = buildGetRequest(EnterBox39ValuePage)
   val postEnterBox39ValuePage: HttpRequestBuilder = buildPostRequest(EnterBox39ValuePage, Some(List(
-    ("original", "ABC1234"), ("amended", "DEF1234"))))
+    ("original", "051187"), ("amended", "051186"))))
 
   val getEnterBox41ValuePage: HttpRequestBuilder = buildGetRequest(EnterBox41ValuePage)
   val postEnterBox41ValuePage: HttpRequestBuilder = buildPostRequest(EnterBox41ValuePage, Some(List(
