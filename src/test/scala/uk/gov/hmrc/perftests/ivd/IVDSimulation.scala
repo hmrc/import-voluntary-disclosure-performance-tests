@@ -208,6 +208,8 @@ class IVDSimulation extends PerformanceTestRunner {
     .withRequests(
       getDeferment,
       postDeferment,
+      getImportersDAN,
+      postImportersDAN
     )
 
   setup("importerSectionEight", "Importer Flow Section 8 - CYA and Submit")

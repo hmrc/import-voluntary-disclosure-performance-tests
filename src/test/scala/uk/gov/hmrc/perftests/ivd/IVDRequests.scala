@@ -126,4 +126,7 @@ object IVDRequests extends BaseRequests with Pages {
 
   val getConfirmEORINumber: HttpRequestBuilder = buildGetRequest(ConfirmEORINumberPage, false)
 
+  val getImportersDAN: HttpRequestBuilder = buildGetRequest(ImporterDANPage)
+  val postImportersDAN: HttpRequestBuilder = buildPostRequest(ImporterDANPage, Some(List(("value", "1234567"))))
+
 }
