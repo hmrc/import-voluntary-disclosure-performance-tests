@@ -126,4 +126,6 @@ object IVDRequests extends BaseRequests with Pages {
 
   val getConfirmEORINumber: HttpRequestBuilder = buildGetRequest(ConfirmEORINumberPage, false)
 
+  val getUnderpaymentStart: HttpRequestBuilder = buildGetRequest(UnderpaymentStartPage, false)
+
 }

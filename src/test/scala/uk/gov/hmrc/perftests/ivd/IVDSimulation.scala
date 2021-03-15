@@ -44,6 +44,7 @@ class IVDSimulation extends PerformanceTestRunner {
 
   setup("importerSectionThree", "Importer Flow Section 3 - Underpayment Amount")
     .withRequests(
+      getUnderpaymentStart,
       getUnderpaymentType,
       postUnderpaymentType,
       getCustomsDuty,
