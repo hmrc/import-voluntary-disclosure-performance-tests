@@ -70,7 +70,7 @@ trait Pages extends BaseRequests {
   object BoxReasonSummaryPage extends Page("/disclosure/underpayment-reason-summary", "Box Reason Summary")
   object HasFurtherInformationPage extends Page("/disclosure/provide-information-option", "Have Further Information")
   object MoreInformationPage extends Page("/disclosure/more-information", "More Information")
-  object UnderpaymentStartPage extends Page("/disclosure/underpayment-start", "Underpayment Start")
+  object UnderpaymentIntroductionPage extends Page("/disclosure/underpayment-introduction", "Underpayment Start")
 
   object ImporterNamePage extends Page("/disclosure/importer-name", "Importer's Name")
   object ImporterEORIExistsPage extends Page("/disclosure/importer-eori-number-exists","Importer EORI Exists")
