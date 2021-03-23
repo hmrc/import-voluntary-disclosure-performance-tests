@@ -232,11 +232,13 @@ class IVDSimulation extends PerformanceTestRunner {
       postImportersEORINumber
     )
 
-    setup("representativeSectionSeven", "Representative Flow Section 7 - Payment Information")
-      .withRequests(
-          getSplitPayemnt,
-          postSplitPayemnt
-      )
+  setup("representativeSectionSeven", "Representative Flow Section 7 - Payment Information")
+    .withRequests(
+      getSplitPayemnt,
+      postSplitPayemnt,
+      getRepresentativeDAN,
+      postRepresentativeDAN
+  )
 
   runSimulation()
 }
