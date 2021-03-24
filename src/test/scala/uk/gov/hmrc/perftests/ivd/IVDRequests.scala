@@ -134,4 +134,9 @@ object IVDRequests extends BaseRequests with Pages {
   val getSplitPayemnt: HttpRequestBuilder = buildGetRequest(SplitPaymentPage)
   val postSplitPayemnt: HttpRequestBuilder = buildPostRequest(SplitPaymentPage, Some(List(("value", "true"))))
 
+  val getRepresentativeDAN: HttpRequestBuilder = buildGetRequest(RepresentativeDANPage)
+  val postRepresentativeDAN: HttpRequestBuilder = buildPostRequest(RepresentativeDANPage, Some(List(
+    ("accountNumber" -> "1234567"),
+    ("value", "value-3"))))
+
 }

@@ -78,6 +78,7 @@ trait Pages extends BaseRequests {
   object ImportersEORINumberPage extends Page("/disclosure/importer-eori-number","Importer EORI Number")
   object ConfirmEORINumberPage extends Page("/confirm-eori","Confirm EORI Number")
   object SplitPaymentPage extends Page("/disclosure/split-deferment-payment","Split payments")
+  object RepresentativeDANPage extends Page("/disclosure/deferment-account-details-all","Representative Deferment Account Number")
 
 
 }
