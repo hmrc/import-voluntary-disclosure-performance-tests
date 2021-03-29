@@ -80,6 +80,7 @@ trait Pages extends BaseRequests {
   object SplitPaymentPage extends Page("/disclosure/split-deferment-payment","Split payments")
   object RepresentativeDANPage extends Page("/disclosure/deferment-account-details-all","Representative Deferment Account Number")
   object RepresentativeDANDutyPage extends Page("/disclosure/deferment-account-details-duties","Representative Deferment Duty Account Number")
+  object RepresentativeDANImportVATPage extends Page("/disclosure/deferment-account-details-vat","Representative Deferment Import VAT Account Number")
 
 
 }
