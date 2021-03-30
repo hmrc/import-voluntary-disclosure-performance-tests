@@ -146,4 +146,9 @@ object IVDRequests extends BaseRequests with Pages {
 
   val getRepresentativeDutySingleAuthorityProofUpload: HttpRequestBuilder = buildGetRequest(RepresentativeUploadProofOfAuthorityPage, false)
 
+  val getRepresentativeDANImportVAT: HttpRequestBuilder = buildGetRequest(RepresentativeDANImportVATPage)
+  val postRepresentativeDANImportVAT: HttpRequestBuilder = buildPostRequest(RepresentativeDANImportVATPage, Some(List(
+    ("accountNumber" -> "1234567"),
+    ("value", "value-3"))))
+
 }

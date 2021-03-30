@@ -240,7 +240,9 @@ class IVDSimulation extends PerformanceTestRunner {
       postRepresentativeDAN,
       getRepresentativeDANDuty,
       postRepresentativeDANDuty,
-      getRepresentativeDutySingleAuthorityProofUpload
+      getRepresentativeDutySingleAuthorityProofUpload,
+      getRepresentativeDANImportVAT,
+      postRepresentativeDANImportVAT
     )
 
   runSimulation()
