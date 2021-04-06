@@ -93,8 +93,7 @@ object UnderpaymentsRequests extends BaseRequests with Pages {
     Some(List(
       ("original", "100"),
       ("amended", "200"))))
-
-
+  
   val getImportVATUnderpaymentConfirm: HttpRequestBuilder = buildGetRequest(ImportVATUnderpaymentConfirmPage, false)
   val postImportVATUnderpaymentConfirm: HttpRequestBuilder = buildPostRequest(ImportVATUnderpaymentConfirmPage)
   val getCustomsDutyUnderpaymentConfirm: HttpRequestBuilder = buildGetRequest(CustomsDutyUnderpaymentConfirmPage, false)
