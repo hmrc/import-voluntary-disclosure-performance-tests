@@ -20,6 +20,7 @@ import uk.gov.hmrc.performance.simulation.PerformanceTestRunner
 import uk.gov.hmrc.perftests.ivd.AuthSessionRequests._
 import uk.gov.hmrc.perftests.ivd.BoxUnderpaymentsRequests._
 import uk.gov.hmrc.perftests.ivd.IVDRequests._
+import uk.gov.hmrc.perftests.ivd.UnderpaymentsRequests.{getUnderpaymentIntroduction, getUnderpaymentType, postUnderpaymentType}
 import uk.gov.hmrc.perftests.ivd.UpscanRequests._
 
 class IVDSimulation extends PerformanceTestRunner {
@@ -47,13 +48,9 @@ class IVDSimulation extends PerformanceTestRunner {
       getUnderpaymentIntroduction,
       getUnderpaymentType,
       postUnderpaymentType,
-      getCustomsDuty,
-      postCustomsDuty,
-      getImportVAT,
-      postImportVAT,
-      getExciseDutyDetails,
-      postExciseDutyDetails,
-      getUnderpaymentSummary,
+      getImportVATUnderpayment,
+      postImportVATUnderpayment,
+      getImportVATUnderpaymentConfirm
     )
 
   setup("importerSectionFour", "Importer Flow Section 4 - Underpayment Reasons")
