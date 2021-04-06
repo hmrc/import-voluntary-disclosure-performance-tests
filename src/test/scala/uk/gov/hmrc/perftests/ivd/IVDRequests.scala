@@ -120,14 +120,4 @@ object IVDRequests extends BaseRequests with Pages {
   val postRepresentativeDANImportVAT: HttpRequestBuilder = buildPostRequest(RepresentativeDANImportVATPage, Some(List(
     ("accountNumber" -> "1234567"),
     ("value", "value-3"))))
-
-  val getImportVATUnderpayment: HttpRequestBuilder = buildGetRequest(ImportVATUnderpaymentPage)
-  val postImportVATUnderpayment: HttpRequestBuilder = buildPostRequest(ImportVATUnderpaymentPage,
-    Some(List(
-      ("original", "100"),
-      ("amended", "200"))))
-
-
-  val getImportVATUnderpaymentConfirm: HttpRequestBuilder = buildGetRequest(ImportVATUnderpaymentConfirmPage, false)
-
 }

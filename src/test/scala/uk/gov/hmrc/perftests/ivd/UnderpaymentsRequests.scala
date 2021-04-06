@@ -17,103 +17,106 @@
 package uk.gov.hmrc.perftests.ivd
 
 import io.gatling.http.request.builder.HttpRequestBuilder
-import uk.gov.hmrc.perftests.ivd.IVDRequests.{buildGetRequest, buildPostRequest}
 
 object UnderpaymentsRequests extends BaseRequests with Pages {
 
   val getUnderpaymentIntroduction: HttpRequestBuilder = buildGetRequest(UnderpaymentIntroductionPage, false)
 
   val getUnderpaymentType: HttpRequestBuilder = buildGetRequest(UnderpaymentTypePage)
-  val postUnderpaymentType: HttpRequestBuilder = buildPostRequest(UnderpaymentTypePage, Some(List(("value", "B00"))))
-  val postCustomsDutyType: HttpRequestBuilder = buildPostRequest(UnderpaymentTypePage, Some(List(("value", "B00"))))
-  val postExciseDutyType: HttpRequestBuilder = buildPostRequest(UnderpaymentTypePage, Some(List(("value", "B00"))))
-  val postAdditionalDutyType: HttpRequestBuilder = buildPostRequest(UnderpaymentTypePage, Some(List(("value", "B00"))))
-  val postDefinitiveDumpingDutyType: HttpRequestBuilder = buildPostRequest(UnderpaymentTypePage, Some(List(("value", "B00"))))
-  val postProvisionalDumpingDutyType: HttpRequestBuilder = buildPostRequest(UnderpaymentTypePage, Some(List(("value", "B00"))))
-  val postDefinitiveCountervailingDutyType: HttpRequestBuilder = buildPostRequest(UnderpaymentTypePage, Some(List(("value", "B00"))))
-  val postProvisionalCountervailingDutyType: HttpRequestBuilder = buildPostRequest(UnderpaymentTypePage, Some(List(("value", "B00"))))
-  val postAgriculturalProductsType: HttpRequestBuilder = buildPostRequest(UnderpaymentTypePage, Some(List(("value", "B00"))))
-  val postCompensatoryDutyType: HttpRequestBuilder = buildPostRequest(UnderpaymentTypePage, Some(List(("value", "B00"))))
+  val postImportVATDutyType: HttpRequestBuilder = buildPostRequest(UnderpaymentTypePage, Some(List(("value", "B00"))))
+  val postCustomsDutyType: HttpRequestBuilder = buildPostRequest(UnderpaymentTypePage, Some(List(("value", "A00"))))
+  val postExciseDutyType: HttpRequestBuilder = buildPostRequest(UnderpaymentTypePage, Some(List(("value", "E00"))))
+  val postAdditionalDutyType: HttpRequestBuilder = buildPostRequest(UnderpaymentTypePage, Some(List(("value", "A20"))))
+  val postDefinitiveDumpingDutyType: HttpRequestBuilder = buildPostRequest(UnderpaymentTypePage, Some(List(("value", "A30"))))
+  val postProvisionalDumpingDutyType: HttpRequestBuilder = buildPostRequest(UnderpaymentTypePage, Some(List(("value", "A35"))))
+  val postDefinitiveCountervailingDutyType: HttpRequestBuilder = buildPostRequest(UnderpaymentTypePage, Some(List(("value", "A40"))))
+  val postProvisionalCountervailingDutyType: HttpRequestBuilder = buildPostRequest(UnderpaymentTypePage, Some(List(("value", "A45"))))
+  val postAgriculturalProductsType: HttpRequestBuilder = buildPostRequest(UnderpaymentTypePage, Some(List(("value", "A10"))))
+  val postCompensatoryDutyType: HttpRequestBuilder = buildPostRequest(UnderpaymentTypePage, Some(List(("value", "D10"))))
 
-  val getBoxItemLevel: HttpRequestBuilder = buildGetRequest(BoxItemLevelPage)
-  val postBoxItemLevel: HttpRequestBuilder = buildPostRequest(BoxItemLevelPage, Some(List(("itemNumber", "1"))))
+  val getImportVATUnderpayment: HttpRequestBuilder = buildGetRequest(ImportVATUnderpaymentPage)
+  val postImportVATUnderpayment: HttpRequestBuilder = buildPostRequest(ImportVATUnderpaymentPage,
+    Some(List(
+      ("original", "100"),
+      ("amended", "200"))))
 
-  val getEnterBox22ValuePage: HttpRequestBuilder = buildGetRequest(EnterBox22ValuePage)
-  val postEnterBox22ValuePage: HttpRequestBuilder = buildPostRequest(EnterBox22ValuePage, Some(List(
-    ("original", "EUR125.00"), ("amended", "GBP125.00"))))
+  val getCustomsDutyUnderpayment: HttpRequestBuilder = buildGetRequest(CustomsDutyUnderpaymentPage)
+  val postCustomsDutyUnderpayment: HttpRequestBuilder = buildPostRequest(CustomsDutyUnderpaymentPage,
+    Some(List(
+      ("original", "100"),
+      ("amended", "200"))))
 
-  val getEnterBox33ValuePage: HttpRequestBuilder = buildGetRequest(EnterBox33ValuePage)
-  val postEnterBox33ValuePage: HttpRequestBuilder = buildPostRequest(EnterBox33ValuePage, Some(List(
-    ("original", "1234567891ABCD"), ("amended", "1987654321DCBA"))))
+  val getExciseDutyUnderpayment: HttpRequestBuilder = buildGetRequest(ExciseDutyUnderpaymentPage)
+  val postExciseDutyUnderpayment: HttpRequestBuilder = buildPostRequest(ExciseDutyUnderpaymentPage,
+    Some(List(
+      ("original", "100"),
+      ("amended", "200"))))
 
-  val getEnterBox34ValuePage: HttpRequestBuilder = buildGetRequest(EnterBox34ValuePage)
-  val postEnterBox34ValuePage: HttpRequestBuilder = buildPostRequest(EnterBox34ValuePage, Some(List(
-    ("original", "CY"), ("amended", "GB"))))
+  val getAdditionalDutyUnderpayment: HttpRequestBuilder = buildGetRequest(AdditionalDutyUnderpaymentPage)
+  val postAdditionalDutyUnderpayment: HttpRequestBuilder = buildPostRequest(AdditionalDutyUnderpaymentPage,
+    Some(List(
+      ("original", "100"),
+      ("amended", "200"))))
 
-  val getEnterBox35ValuePage: HttpRequestBuilder = buildGetRequest(EnterBox35ValuePage)
-  val postEnterBox35ValuePage: HttpRequestBuilder = buildPostRequest(EnterBox35ValuePage, Some(List(
-    ("original", "200"), ("amended", "300"))))
+  val getDefinitiveDumpingDutyUnderpayment: HttpRequestBuilder = buildGetRequest(DefinitiveDumpingDutyUnderpaymentPage)
+  val postDefinitiveDumpingDutyUnderpayment: HttpRequestBuilder = buildPostRequest(DefinitiveDumpingDutyUnderpaymentPage,
+    Some(List(
+      ("original", "100"),
+      ("amended", "200"))))
 
-  val getEnterBox36ValuePage: HttpRequestBuilder = buildGetRequest(EnterBox36ValuePage)
-  val postEnterBox36ValuePage: HttpRequestBuilder = buildPostRequest(EnterBox36ValuePage, Some(List(
-    ("original", "123"), ("amended", "234"))))
+  val getProvisionalDumpingDutyUnderpayment: HttpRequestBuilder = buildGetRequest(ProvisionalDumpingDutyUnderpaymentPage)
+  val postProvisionalDumpingDutyUnderpayment: HttpRequestBuilder = buildPostRequest(ProvisionalDumpingDutyUnderpaymentPage,
+    Some(List(
+      ("original", "100"),
+      ("amended", "200"))))
 
-  val getEnterBox37ValuePage: HttpRequestBuilder = buildGetRequest(EnterBox37ValuePage)
-  val postEnterBox37ValuePage: HttpRequestBuilder = buildPostRequest(EnterBox37ValuePage, Some(List(
-    ("original", "1234A67"), ("amended", "7654C21"))))
+  val getDefinitiveCountervailingDutyUnderpayment: HttpRequestBuilder = buildGetRequest(DefinitiveCountervailingDutyUnderpaymentPage)
+  val postDefinitiveCountervailingDutyUnderpayment: HttpRequestBuilder = buildPostRequest(DefinitiveCountervailingDutyUnderpaymentPage,
+    Some(List(
+      ("original", "100"),
+      ("amended", "200"))))
 
-  val getEnterBox38ValuePage: HttpRequestBuilder = buildGetRequest(EnterBox38ValuePage)
-  val postEnterBox38ValuePage: HttpRequestBuilder = buildPostRequest(EnterBox38ValuePage, Some(List(
-    ("original", "100.20"), ("amended", "101.20"))))
+  val getProvisionalCountervailingDutyUnderpayment: HttpRequestBuilder = buildGetRequest(ProvisionalCountervailingDutyUnderpaymentPage)
+  val postProvisionalCountervailingDutyUnderpayment: HttpRequestBuilder = buildPostRequest(ProvisionalCountervailingDutyUnderpaymentPage,
+    Some(List(
+      ("original", "100"),
+      ("amended", "200"))))
 
-  val getEnterBox39ValuePage: HttpRequestBuilder = buildGetRequest(EnterBox39ValuePage)
-  val postEnterBox39ValuePage: HttpRequestBuilder = buildPostRequest(EnterBox39ValuePage, Some(List(
-    ("original", "051187"), ("amended", "051186"))))
+  val getAgriculturalProductsUnderpayment: HttpRequestBuilder = buildGetRequest(AgriculturalProductsUnderpaymentPage)
+  val postAgriculturalProductsUnderpayment: HttpRequestBuilder = buildPostRequest(AgriculturalProductsUnderpaymentPage,
+    Some(List(
+      ("original", "100"),
+      ("amended", "200"))))
 
-  val getEnterBox41ValuePage: HttpRequestBuilder = buildGetRequest(EnterBox41ValuePage)
-  val postEnterBox41ValuePage: HttpRequestBuilder = buildPostRequest(EnterBox41ValuePage, Some(List(
-    ("original", "100.00"), ("amended", "200.00"))))
+  val getCompensatoryDutyUnderpayment: HttpRequestBuilder = buildGetRequest(CompensatoryDutyUnderpaymentPage)
+  val postCompensatoryDutyUnderpayment: HttpRequestBuilder = buildPostRequest(CompensatoryDutyUnderpaymentPage,
+    Some(List(
+      ("original", "100"),
+      ("amended", "200"))))
 
-  val getEnterBox42ValuePage: HttpRequestBuilder = buildGetRequest(EnterBox42ValuePage)
-  val postEnterBox42ValuePage: HttpRequestBuilder = buildPostRequest(EnterBox42ValuePage, Some(List(
-    ("original", "50"), ("amended", "60"))))
 
-  val getEnterBox43ValuePage: HttpRequestBuilder = buildGetRequest(EnterBox43ValuePage)
-  val postEnterBox43ValuePage: HttpRequestBuilder = buildPostRequest(EnterBox43ValuePage, Some(List(
-    ("original", "1"), ("amended", "5"))))
+  val getImportVATUnderpaymentConfirm: HttpRequestBuilder = buildGetRequest(ImportVATUnderpaymentConfirmPage, false)
+  val postImportVATUnderpaymentConfirm: HttpRequestBuilder = buildPostRequest(ImportVATUnderpaymentConfirmPage)
+  val getCustomsDutyUnderpaymentConfirm: HttpRequestBuilder = buildGetRequest(CustomsDutyUnderpaymentConfirmPage, false)
+  val postCustomsDutyUnderpaymentConfirm: HttpRequestBuilder = buildPostRequest(CustomsDutyUnderpaymentConfirmPage)
+  val getExciseDutyUnderpaymentConfirm: HttpRequestBuilder = buildGetRequest(ExciseDutyUnderpaymentConfirmPage, false)
+  val postExciseDutyUnderpaymentConfirm: HttpRequestBuilder = buildPostRequest(ExciseDutyUnderpaymentConfirmPage)
+  val getAdditionalDutyUnderpaymentConfirm: HttpRequestBuilder = buildGetRequest(AdditionalDutyUnderpaymentConfirmPage, false)
+  val postAdditionalDutyUnderpaymentConfirm: HttpRequestBuilder = buildPostRequest(AdditionalDutyUnderpaymentConfirmPage)
+  val getDefinitiveDumpingDutyUnderpaymentConfirm: HttpRequestBuilder = buildGetRequest(DefinitiveDumpingDutyUnderpaymentConfirmPage, false)
+  val postDefinitiveDumpingDutyUnderpaymentConfirm: HttpRequestBuilder = buildPostRequest(DefinitiveDumpingDutyUnderpaymentConfirmPage)
+  val getProvisionalDumpingDutyUnderpaymentConfirm: HttpRequestBuilder = buildGetRequest(ProvisionalDumpingDutyUnderpaymentConfirmPage, false)
+  val postProvisionalDumpingDutyUnderpaymentConfirm: HttpRequestBuilder = buildPostRequest(ProvisionalDumpingDutyUnderpaymentConfirmPage)
+  val getDefinitiveCountervailingDutyUnderpaymentConfirm: HttpRequestBuilder = buildGetRequest(DefinitiveCountervailingDutyUnderpaymentConfirmPage, false)
+  val postDefinitiveCountervailingDutyUnderpaymentConfirm: HttpRequestBuilder = buildPostRequest(DefinitiveCountervailingDutyUnderpaymentConfirmPage)
+  val getProvisionalCountervailingDutyUnderpaymentConfirm: HttpRequestBuilder = buildGetRequest(ProvisionalCountervailingDutyUnderpaymentConfirmPage, false)
+  val postProvisionalCountervailingDutyUnderpaymentConfirm: HttpRequestBuilder = buildPostRequest(ProvisionalCountervailingDutyUnderpaymentConfirmPage)
+  val getAgriculturalProductsUnderpaymentConfirm: HttpRequestBuilder = buildGetRequest(AgriculturalProductsUnderpaymentConfirmPage, false)
+  val postAgriculturalProductsUnderpaymentConfirm: HttpRequestBuilder = buildPostRequest(AgriculturalProductsUnderpaymentConfirmPage)
+  val getCompensatoryDutyUnderpaymentConfirm: HttpRequestBuilder = buildGetRequest(CompensatoryDutyUnderpaymentConfirmPage, false)
+  val postCompensatoryDutyUnderpaymentConfirm: HttpRequestBuilder = buildPostRequest(CompensatoryDutyUnderpaymentConfirmPage)
 
-  val getEnterBox45ValuePage: HttpRequestBuilder = buildGetRequest(EnterBox45ValuePage)
-  val postEnterBox45ValuePage: HttpRequestBuilder = buildPostRequest(EnterBox45ValuePage, Some(List(
-    ("original", "A12.5"), ("amended", "B12.5"))))
-
-  val getEnterBox46ValuePage: HttpRequestBuilder = buildGetRequest(EnterBox46ValuePage)
-  val postEnterBox46ValuePage: HttpRequestBuilder = buildPostRequest(EnterBox46ValuePage, Some(List(
-    ("original", "100.50"), ("amended", "200.50"))))
-
-  val getEnterBox62ValuePage: HttpRequestBuilder = buildGetRequest(EnterBox62ValuePage)
-  val postEnterBox62ValuePage: HttpRequestBuilder = buildPostRequest(EnterBox62ValuePage, Some(List(
-    ("original", "EUR125.00"), ("amended", "GBP125.00"))))
-
-  val getEnterBox63ValuePage: HttpRequestBuilder = buildGetRequest(EnterBox63ValuePage)
-  val postEnterBox63ValuePage: HttpRequestBuilder = buildPostRequest(EnterBox63ValuePage, Some(List(
-    ("original", "EUR125.00"), ("amended", "GBP125.00"))))
-
-  val getEnterBox66ValuePage: HttpRequestBuilder = buildGetRequest(EnterBox66ValuePage)
-  val postEnterBox66ValuePage: HttpRequestBuilder = buildPostRequest(EnterBox66ValuePage, Some(List(
-    ("original", "EUR125.00"), ("amended", "GBP125.00"))))
-
-  val getEnterBox67ValuePage: HttpRequestBuilder = buildGetRequest(EnterBox67ValuePage)
-  val postEnterBox67ValuePage: HttpRequestBuilder = buildPostRequest(EnterBox67ValuePage, Some(List(
-    ("original", "EUR125.00"), ("amended", "GBP125.00"))))
-
-  val getEnterBox68ValuePage: HttpRequestBuilder = buildGetRequest(EnterBox68ValuePage)
-  val postEnterBox68ValuePage: HttpRequestBuilder = buildPostRequest(EnterBox68ValuePage, Some(List(
-    ("original", "EUR125.00"), ("amended", "GBP125.00"))))
-
-  val getUnderpaymentBoxConfirmationPage: HttpRequestBuilder = buildGetRequest(UnderpaymentBoxConfirmationPage, csrf = false)
-  val postUnderpaymentBoxConfirmationPage: HttpRequestBuilder = buildPostRequest(UnderpaymentBoxConfirmationPage)
-
-  val getBoxReasonSummary: HttpRequestBuilder = buildGetRequest(BoxReasonSummaryPage, false)
-  val postBoxReasonSummary: HttpRequestBuilder = buildPostRequest(BoxReasonSummaryPage, Some(List(("value", "false"))))
+  val getUnderpaymentSummary: HttpRequestBuilder = buildGetRequest(UnderpaymentSummaryPage)
+  val postUnderpaymentSummary: HttpRequestBuilder = buildPostRequest(UnderpaymentSummaryPage, Some(List(("value", "false"))))
 
 }
