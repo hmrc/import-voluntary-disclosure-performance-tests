@@ -20,6 +20,7 @@ import uk.gov.hmrc.performance.simulation.PerformanceTestRunner
 import uk.gov.hmrc.perftests.ivd.AuthSessionRequests._
 import uk.gov.hmrc.perftests.ivd.BoxUnderpaymentsRequests._
 import uk.gov.hmrc.perftests.ivd.IVDRequests._
+import uk.gov.hmrc.perftests.ivd.UnderpaymentsRequests._
 import uk.gov.hmrc.perftests.ivd.UpscanRequests._
 
 class IVDSimulation extends PerformanceTestRunner {
@@ -45,15 +46,77 @@ class IVDSimulation extends PerformanceTestRunner {
   setup("importerSectionThree", "Importer Flow Section 3 - Underpayment Amount")
     .withRequests(
       getUnderpaymentIntroduction,
+      //TODO - Import VAT Underpayment Type
       getUnderpaymentType,
-      postUnderpaymentType,
-      getCustomsDuty,
-      postCustomsDuty,
-      getImportVAT,
-      postImportVAT,
-      getExciseDutyDetails,
-      postExciseDutyDetails,
+      postImportVATDutyType,
+      getImportVATUnderpayment,
+      postImportVATUnderpayment,
+      getImportVATUnderpaymentConfirm,
+      postImportVATUnderpaymentConfirm,
       getUnderpaymentSummary,
+      postUnderpaymentSummary,
+      //TODO - Customs Duty Underpayment Type
+      getUnderpaymentType,
+      postCustomsDutyType,
+      getCustomsDutyUnderpayment,
+      postCustomsDutyUnderpayment,
+      getCustomsDutyUnderpaymentConfirm,
+      postCustomsDutyUnderpaymentConfirm,
+      //TODO - Excise Duty Underpayment Type
+      getUnderpaymentType,
+      postExciseDutyType,
+      getExciseDutyUnderpayment,
+      postExciseDutyUnderpayment,
+      getExciseDutyUnderpaymentConfirm,
+      postExciseDutyUnderpaymentConfirm,
+      //TODO - Additional VAT Underpayment Type
+      getUnderpaymentType,
+      postAdditionalDutyType,
+      getAdditionalDutyUnderpayment,
+      postAdditionalDutyUnderpayment,
+      getAdditionalDutyUnderpaymentConfirm,
+      postAdditionalDutyUnderpaymentConfirm,
+      //TODO - Definitive Dumping Duty Underpayment Type
+      getUnderpaymentType,
+      postDefinitiveDumpingDutyType,
+      getDefinitiveDumpingDutyUnderpayment,
+      postDefinitiveDumpingDutyUnderpayment,
+      getDefinitiveDumpingDutyUnderpaymentConfirm,
+      postDefinitiveDumpingDutyUnderpaymentConfirm,
+      //TODO - Provisional Dumping Duty Underpayment Type
+      getUnderpaymentType,
+      postProvisionalDumpingDutyType,
+      getProvisionalDumpingDutyUnderpayment,
+      postProvisionalDumpingDutyUnderpayment,
+      getProvisionalDumpingDutyUnderpaymentConfirm,
+      postProvisionalDumpingDutyUnderpaymentConfirm,
+      //TODO - Definitive Countervailing Duty Underpayment Type
+      postDefinitiveCountervailingDutyType,
+      getDefinitiveCountervailingDutyUnderpayment,
+      postDefinitiveCountervailingDutyUnderpayment,
+      getDefinitiveCountervailingDutyUnderpaymentConfirm,
+      postDefinitiveCountervailingDutyUnderpaymentConfirm,
+      //TODO - Provisional Countervailing Duty Underpayment Type
+      getUnderpaymentType,
+      postProvisionalCountervailingDutyType,
+      getProvisionalCountervailingDutyUnderpayment,
+      postProvisionalCountervailingDutyUnderpayment,
+      getProvisionalCountervailingDutyUnderpaymentConfirm,
+      postProvisionalCountervailingDutyUnderpaymentConfirm,
+      //TODO - Agricultural Products Underpayment Type
+      getUnderpaymentType,
+      postAgriculturalProductsType,
+      getAgriculturalProductsUnderpayment,
+      postAgriculturalProductsUnderpayment,
+      getAgriculturalProductsUnderpaymentConfirm,
+      postAgriculturalProductsUnderpaymentConfirm,
+      //TODO - Compensatory Duty Underpayment Type
+      getUnderpaymentType,
+      postCompensatoryDutyType,
+      getCompensatoryDutyUnderpayment,
+      postCompensatoryDutyUnderpayment,
+      getCompensatoryDutyUnderpaymentConfirm,
+      postCompensatoryDutyUnderpaymentConfirm
     )
 
   setup("importerSectionFour", "Importer Flow Section 4 - Underpayment Reasons")
