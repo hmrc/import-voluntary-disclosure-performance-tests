@@ -128,4 +128,105 @@ object BoxUnderpaymentsRequests extends BaseRequests with Pages {
   val getBoxReasonSummary: HttpRequestBuilder = buildGetRequest(BoxReasonSummaryPage, false)
   val postBoxReasonSummary: HttpRequestBuilder = buildPostRequest(BoxReasonSummaryPage, Some(List(("value", "false"))))
 
+  val getInitialiseChangeBox22Reason: HttpRequestBuilder = buildGetRequest(InitialiseChangeBoxReasonPage(22, 0), false, expectedStatus = 303)
+  val getInitialiseChangeBox33Reason: HttpRequestBuilder = buildGetRequest(InitialiseChangeBoxReasonPage(33, 1), false, expectedStatus = 303)
+  val getInitialiseChangeBox34Reason: HttpRequestBuilder = buildGetRequest(InitialiseChangeBoxReasonPage(34, 1), false, expectedStatus = 303)
+  val getInitialiseChangeBox35Reason: HttpRequestBuilder = buildGetRequest(InitialiseChangeBoxReasonPage(35, 1), false, expectedStatus = 303)
+  val getInitialiseChangeBox36Reason: HttpRequestBuilder = buildGetRequest(InitialiseChangeBoxReasonPage(36, 1), false, expectedStatus = 303)
+  val getInitialiseChangeBox37Reason: HttpRequestBuilder = buildGetRequest(InitialiseChangeBoxReasonPage(37, 1), false, expectedStatus = 303)
+  val getInitialiseChangeBox38Reason: HttpRequestBuilder = buildGetRequest(InitialiseChangeBoxReasonPage(38, 1), false, expectedStatus = 303)
+  val getInitialiseChangeBox39Reason: HttpRequestBuilder = buildGetRequest(InitialiseChangeBoxReasonPage(39, 1), false, expectedStatus = 303)
+  val getInitialiseChangeBox41Reason: HttpRequestBuilder = buildGetRequest(InitialiseChangeBoxReasonPage(41, 1), false, expectedStatus = 303)
+  val getInitialiseChangeBox42Reason: HttpRequestBuilder = buildGetRequest(InitialiseChangeBoxReasonPage(42, 1), false, expectedStatus = 303)
+  val getInitialiseChangeBox43Reason: HttpRequestBuilder = buildGetRequest(InitialiseChangeBoxReasonPage(43, 1), false, expectedStatus = 303)
+  val getInitialiseChangeBox45Reason: HttpRequestBuilder = buildGetRequest(InitialiseChangeBoxReasonPage(45, 1), false, expectedStatus = 303)
+  val getInitialiseChangeBox46Reason: HttpRequestBuilder = buildGetRequest(InitialiseChangeBoxReasonPage(46, 1), false, expectedStatus = 303)
+  val getInitialiseChangeBox62Reason: HttpRequestBuilder = buildGetRequest(InitialiseChangeBoxReasonPage(62, 0), false, expectedStatus = 303)
+  val getInitialiseChangeBox63Reason: HttpRequestBuilder = buildGetRequest(InitialiseChangeBoxReasonPage(63, 0), false, expectedStatus = 303)
+  val getInitialiseChangeBox66Reason: HttpRequestBuilder = buildGetRequest(InitialiseChangeBoxReasonPage(66, 0), false, expectedStatus = 303)
+  val getInitialiseChangeBox67Reason: HttpRequestBuilder = buildGetRequest(InitialiseChangeBoxReasonPage(67, 0), false, expectedStatus = 303)
+  val getInitialiseChangeBox68Reason: HttpRequestBuilder = buildGetRequest(InitialiseChangeBoxReasonPage(68, 0), false, expectedStatus = 303)
+  val getChangeBoxReason: HttpRequestBuilder = buildGetRequest(ChangeBoxReasonPage, false)
+
+  val getRemoveBoxReason: HttpRequestBuilder = buildGetRequest(RemoveBoxReasonPage, false)
+  val postRemoveBoxReason: HttpRequestBuilder = buildPostRequest(RemoveBoxReasonPage, Some(List(("value", "false"))))
+
+  val getItemNumberForBoxReason: HttpRequestBuilder = buildGetRequest(ChangeItemNumberForBoxReasonPage, false)
+  val postItemNumberForBoxReason: HttpRequestBuilder = buildPostRequest(ChangeItemNumberForBoxReasonPage, Some(List(("itemNumber", "5"))))
+
+  val getChangeBox22ValuePage: HttpRequestBuilder = buildGetRequest(ChangeBox22ValuePage)
+  val postChangeBox22ValuePage: HttpRequestBuilder = buildPostRequest(ChangeBox22ValuePage, Some(List(
+    ("original", "EUR225.00"), ("amended", "GBP225.00"))))
+
+  val getChangeBox33ValuePage: HttpRequestBuilder = buildGetRequest(ChangeBox33ValuePage)
+  val postChangeBox33ValuePage: HttpRequestBuilder = buildPostRequest(ChangeBox33ValuePage, Some(List(
+    ("original", "1234567891AAAA"), ("amended", "1987654321BBBB"))))
+
+  val getChangeBox34ValuePage: HttpRequestBuilder = buildGetRequest(ChangeBox34ValuePage)
+  val postChangeBox34ValuePage: HttpRequestBuilder = buildPostRequest(ChangeBox34ValuePage, Some(List(
+    ("original", "US"), ("amended", "UK"))))
+
+  val getChangeBox35ValuePage: HttpRequestBuilder = buildGetRequest(ChangeBox35ValuePage)
+  val postChangeBox35ValuePage: HttpRequestBuilder = buildPostRequest(ChangeBox35ValuePage, Some(List(
+    ("original", "201"), ("amended", "302"))))
+
+  val getChangeBox36ValuePage: HttpRequestBuilder = buildGetRequest(ChangeBox36ValuePage)
+  val postChangeBox36ValuePage: HttpRequestBuilder = buildPostRequest(ChangeBox36ValuePage, Some(List(
+    ("original", "222"), ("amended", "333"))))
+
+  val getChangeBox37ValuePage: HttpRequestBuilder = buildGetRequest(ChangeBox37ValuePage)
+  val postChangeBox37ValuePage: HttpRequestBuilder = buildPostRequest(ChangeBox37ValuePage, Some(List(
+    ("original", "1234B67"), ("amended", "7654B21"))))
+
+  val getChangeBox38ValuePage: HttpRequestBuilder = buildGetRequest(ChangeBox38ValuePage)
+  val postChangeBox38ValuePage: HttpRequestBuilder = buildPostRequest(ChangeBox38ValuePage, Some(List(
+    ("original", "200.20"), ("amended", "201.20"))))
+
+  val getChangeBox39ValuePage: HttpRequestBuilder = buildGetRequest(ChangeBox39ValuePage)
+  val postChangeBox39ValuePage: HttpRequestBuilder = buildPostRequest(ChangeBox39ValuePage, Some(List(
+    ("original", "051188"), ("amended", "051189"))))
+
+  val getChangeBox41ValuePage: HttpRequestBuilder = buildGetRequest(ChangeBox41ValuePage)
+  val postChangeBox41ValuePage: HttpRequestBuilder = buildPostRequest(ChangeBox41ValuePage, Some(List(
+    ("original", "101.00"), ("amended", "201.00"))))
+
+  val getChangeBox42ValuePage: HttpRequestBuilder = buildGetRequest(ChangeBox42ValuePage)
+  val postChangeBox42ValuePage: HttpRequestBuilder = buildPostRequest(ChangeBox42ValuePage, Some(List(
+    ("original", "51"), ("amended", "61"))))
+
+  val getChangeBox43ValuePage: HttpRequestBuilder = buildGetRequest(ChangeBox43ValuePage)
+  val postChangeBox43ValuePage: HttpRequestBuilder = buildPostRequest(ChangeBox43ValuePage, Some(List(
+    ("original", "2"), ("amended", "6"))))
+
+  val getChangeBox45ValuePage: HttpRequestBuilder = buildGetRequest(ChangeBox45ValuePage)
+  val postChangeBox45ValuePage: HttpRequestBuilder = buildPostRequest(ChangeBox45ValuePage, Some(List(
+    ("original", "A22.5"), ("amended", "B22.5"))))
+
+  val getChangeBox46ValuePage: HttpRequestBuilder = buildGetRequest(ChangeBox46ValuePage)
+  val postChangeBox46ValuePage: HttpRequestBuilder = buildPostRequest(ChangeBox46ValuePage, Some(List(
+    ("original", "101.50"), ("amended", "201.50"))))
+
+  val getChangeBox62ValuePage: HttpRequestBuilder = buildGetRequest(ChangeBox62ValuePage)
+  val postChangeBox62ValuePage: HttpRequestBuilder = buildPostRequest(ChangeBox62ValuePage, Some(List(
+    ("original", "EUR225.00"), ("amended", "GBP225.00"))))
+
+  val getChangeBox63ValuePage: HttpRequestBuilder = buildGetRequest(ChangeBox63ValuePage)
+  val postChangeBox63ValuePage: HttpRequestBuilder = buildPostRequest(ChangeBox63ValuePage, Some(List(
+    ("original", "EUR225.00"), ("amended", "GBP225.00"))))
+
+  val getChangeBox66ValuePage: HttpRequestBuilder = buildGetRequest(ChangeBox66ValuePage)
+  val postChangeBox66ValuePage: HttpRequestBuilder = buildPostRequest(ChangeBox66ValuePage, Some(List(
+    ("original", "EUR225.00"), ("amended", "GBP225.00"))))
+
+  val getChangeBox67ValuePage: HttpRequestBuilder = buildGetRequest(ChangeBox67ValuePage)
+  val postChangeBox67ValuePage: HttpRequestBuilder = buildPostRequest(ChangeBox67ValuePage, Some(List(
+    ("original", "EUR225.00"), ("amended", "GBP225.00"))))
+
+  val getChangeBox68ValuePage: HttpRequestBuilder = buildGetRequest(ChangeBox68ValuePage)
+  val postChangeBox68ValuePage: HttpRequestBuilder = buildPostRequest(ChangeBox68ValuePage, Some(List(
+    ("original", "EUR225.00"), ("amended", "GBP225.00"))))
+
+  val getConfirmationBoxChangePage: HttpRequestBuilder = buildGetRequest(ConfirmationBoxChangePage, csrf = false)
+  val postConfirmationBoxChangePage: HttpRequestBuilder = buildPostRequest(ConfirmationBoxChangePage)
+
 }
