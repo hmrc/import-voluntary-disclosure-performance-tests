@@ -120,4 +120,45 @@ object IVDRequests extends BaseRequests with Pages {
   val postRepresentativeDANImportVAT: HttpRequestBuilder = buildPostRequest(RepresentativeDANImportVATPage, Some(List(
     ("accountNumber" -> "1234567"),
     ("value", "value-3"))))
+
+  val getChangeImportVATUnderpayment: HttpRequestBuilder = buildGetRequest(ChangeImportVATUnderpaymentPage)
+  val getRemoveImportVATUnderpayment: HttpRequestBuilder = buildGetRequest(RemoveImportVATUnderpaymentPage)
+  val postRemoveImportVATUnderpayment: HttpRequestBuilder = buildPostRequest(RemoveImportVATUnderpaymentPage, Some(List(("value", "true"))))
+
+  val getChangeCustomsDutyUnderpayment: HttpRequestBuilder = buildGetRequest(ChangeCustomsDutyUnderpaymentPage)
+  val getRemoveCustomsDutyUnderpayment: HttpRequestBuilder = buildGetRequest(RemoveCustomsDutyUnderpaymentPage)
+  val postRemoveCustomsDutyUnderpayment: HttpRequestBuilder = buildPostRequest(RemoveCustomsDutyUnderpaymentPage, Some(List(("value", "true"))))
+
+  val getChangeExciseDutyUnderpayment: HttpRequestBuilder = buildGetRequest(ChangeExciseDutyUnderpaymentPage)
+  val getRemoveExciseDutyUnderpayment: HttpRequestBuilder = buildGetRequest(RemoveExciseDutyUnderpaymentPage)
+  val postRemoveExciseDutyUnderpayment: HttpRequestBuilder = buildPostRequest(RemoveExciseDutyUnderpaymentPage, Some(List(("value", "true"))))
+
+  val getChangeAdditionalDutyUnderpayment: HttpRequestBuilder = buildGetRequest(ChangeAdditionalDutyUnderpaymentPage)
+  val getRemoveAdditionalDutyUnderpayment: HttpRequestBuilder = buildGetRequest(RemoveAdditionalDutyUnderpaymentPage)
+  val postRemoveAdditionalDutyUnderpayment: HttpRequestBuilder = buildPostRequest(RemoveAdditionalDutyUnderpaymentPage, Some(List(("value", "true"))))
+
+  val getChangeDefinitiveAddUnderpayment: HttpRequestBuilder = buildGetRequest(ChangeDefinitiveAddUnderpaymentPage)
+  val getRemoveDefinitiveAddUnderpayment: HttpRequestBuilder = buildGetRequest(RemoveDefinitiveAddUnderpaymentPage)
+  val postRemoveDefinitiveAddUnderpayment: HttpRequestBuilder = buildPostRequest(RemoveDefinitiveAddUnderpaymentPage, Some(List(("value", "true"))))
+
+  val getChangeProvisionalAddUnderpayment: HttpRequestBuilder = buildGetRequest(ChangeProvisionalAddUnderpaymentPage)
+  val getRemoveProvisionalAddUnderpayment: HttpRequestBuilder = buildGetRequest(RemoveProvisionalAddUnderpaymentPage)
+  val postRemoveProvisionalAddUnderpayment: HttpRequestBuilder = buildPostRequest(RemoveProvisionalAddUnderpaymentPage, Some(List(("value", "true"))))
+
+  val getChangeDefinitiveCountervailingAddUnderpayment: HttpRequestBuilder = buildGetRequest(ChangeDefinitiveCountervailingDutyUnderpaymentPage)
+  val getRemoveDefinitiveCountervailingAddUnderpayment: HttpRequestBuilder = buildGetRequest(RemoveDefinitiveCountervailingDutyUnderpaymentPage)
+  val postRemoveDefinitiveCountervailingAddUnderpayment: HttpRequestBuilder = buildPostRequest(RemoveDefinitiveCountervailingDutyUnderpaymentPage, Some(List(("value", "true"))))
+
+  val getChangeProvisionalCountervailingAddUnderpayment: HttpRequestBuilder = buildGetRequest(ChangeProvisionalCountervailingDutyUnderpaymentPage)
+  val getRemoveProvisionalCountervailingAddUnderpayment: HttpRequestBuilder = buildGetRequest(RemoveProvisionalCountervailingDutyUnderpaymentPage)
+  val postRemoveProvisionalCountervailingAddUnderpayment: HttpRequestBuilder = buildPostRequest(RemoveProvisionalCountervailingDutyUnderpaymentPage, Some(List(("value", "true"))))
+
+  val getChangeCustomsDutyAgriculturalProductsUnderpayment: HttpRequestBuilder = buildGetRequest(ChangeCustomsDutyAgriculturalProductsUnderpaymentPage)
+  val getRemoveCustomsDutyAgriculturalProductsUnderpayment: HttpRequestBuilder = buildGetRequest(RemoveCustomsDutyAgriculturalProductsUnderpaymentPage)
+  val postRemoveCustomsDutyAgriculturalProductsUnderpayment: HttpRequestBuilder = buildPostRequest(RemoveCustomsDutyAgriculturalProductsUnderpaymentPage, Some(List(("value", "true"))))
+
+  val getChangeCompensatoryDutyUnderpayment: HttpRequestBuilder = buildGetRequest(ChangeCompensatoryDutyUnderpaymentPage)
+  val getRemoveCompensatoryDutyUnderpayment: HttpRequestBuilder = buildGetRequest(RemoveCompensatoryDutyUnderpaymentPage)
+  val postRemoveCompensatoryDutyUnderpayment: HttpRequestBuilder = buildPostRequest(RemoveCompensatoryDutyUnderpaymentPage, Some(List(("value", "true"))))
+
 }
