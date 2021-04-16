@@ -30,7 +30,7 @@ trait Pages extends BaseRequests {
   object EnterCustomsProcedureCodePage extends Page("/disclosure/enter-cpc", "Enter Customs Procedure Code")
   object TraderContactDetailsPage extends Page("/disclosure/your-contact-details", "Trader Contact Details")
   object DefermentPage extends Page("/disclosure/how-will-you-pay", "Deferment")
-  object SupportingDocumentsPage extends Page("/disclosure/supporting-documentation-format", "Supporting Documentation Formats Info")
+  object DocumentsYouMustUploadPage extends Page("/disclosure/mandatory-documents", "Documents You Must Upload")
   object ImporterAddressPage extends Page("/disclosure/address-correct", "Importer Address")
   object UploadFilePage extends Page("/disclosure/upload-file", "Upload File")
   object UploadFileSuccessRedirectPage extends Page(s"/disclosure/upload-file/upscan-response?key=$${upscanKey}", "Upload File Success Redirect")
