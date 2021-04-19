@@ -37,7 +37,7 @@ trait Pages extends BaseRequests {
   object UploadFileCallBackPage extends Page("/internal/call-back-from-upscan", "Upload file Callback Success")
   object UploadFilePollingPage extends Page(s"/disclosure/upload-file/polling?key=$${upscanKey}", "Upload file Polling")
   object UploadAnotherFilePage extends Page("/disclosure/upload-another-file", "Upload Another File")
-  object RemoveUploadedFilePage extends Page("/disclosure/remove-file/1", "Remove Uploaded File")
+  object RemoveUploadedFilePage extends Page("/disclosure/confirm-file-removal/1", "Remove Uploaded File")
   object CheckYourAnswersPage extends Page("/disclosure/check-your-answers", "Check Your Answers")
   object ConfirmationPage extends Page("/disclosure/confirmation", "Confirmation Page")
   object BoxGuidancePage extends Page("/disclosure/reason-introduction", "Box Guidance")
