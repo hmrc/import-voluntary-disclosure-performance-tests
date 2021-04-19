@@ -53,8 +53,9 @@ class IVDSimulation extends PerformanceTestRunner {
       postImportVATUnderpayment,
       getImportVATUnderpaymentConfirm,
       postImportVATUnderpaymentConfirm,
-      getUnderpaymentSummary,
-      postUnderpaymentSummary,
+      getChangeImportVATUnderpayment,
+      getRemoveImportVATUnderpayment,
+      postRemoveImportVATUnderpayment,
       //TODO - Customs Duty Underpayment Type
       getUnderpaymentType,
       postCustomsDutyType,
@@ -62,6 +63,9 @@ class IVDSimulation extends PerformanceTestRunner {
       postCustomsDutyUnderpayment,
       getCustomsDutyUnderpaymentConfirm,
       postCustomsDutyUnderpaymentConfirm,
+      getChangeCustomsDutyUnderpayment,
+      getRemoveCustomsDutyUnderpayment,
+      postRemoveCustomsDutyUnderpayment,
       //TODO - Excise Duty Underpayment Type
       getUnderpaymentType,
       postExciseDutyType,
@@ -69,6 +73,9 @@ class IVDSimulation extends PerformanceTestRunner {
       postExciseDutyUnderpayment,
       getExciseDutyUnderpaymentConfirm,
       postExciseDutyUnderpaymentConfirm,
+      getChangeExciseDutyUnderpayment,
+      getRemoveExciseDutyUnderpayment,
+      postRemoveExciseDutyUnderpayment,
       //TODO - Additional VAT Underpayment Type
       getUnderpaymentType,
       postAdditionalDutyType,
@@ -76,6 +83,9 @@ class IVDSimulation extends PerformanceTestRunner {
       postAdditionalDutyUnderpayment,
       getAdditionalDutyUnderpaymentConfirm,
       postAdditionalDutyUnderpaymentConfirm,
+      getChangeAdditionalDutyUnderpayment,
+      getRemoveAdditionalDutyUnderpayment,
+      postRemoveAdditionalDutyUnderpayment,
       //TODO - Definitive Dumping Duty Underpayment Type
       getUnderpaymentType,
       postDefinitiveDumpingDutyType,
@@ -83,6 +93,9 @@ class IVDSimulation extends PerformanceTestRunner {
       postDefinitiveDumpingDutyUnderpayment,
       getDefinitiveDumpingDutyUnderpaymentConfirm,
       postDefinitiveDumpingDutyUnderpaymentConfirm,
+      getChangeDefinitiveAddUnderpayment,
+      getRemoveDefinitiveAddUnderpayment,
+      postRemoveDefinitiveAddUnderpayment,
       //TODO - Provisional Dumping Duty Underpayment Type
       getUnderpaymentType,
       postProvisionalDumpingDutyType,
@@ -90,12 +103,18 @@ class IVDSimulation extends PerformanceTestRunner {
       postProvisionalDumpingDutyUnderpayment,
       getProvisionalDumpingDutyUnderpaymentConfirm,
       postProvisionalDumpingDutyUnderpaymentConfirm,
+      getChangeProvisionalAddUnderpayment,
+      getRemoveProvisionalAddUnderpayment,
+      postRemoveProvisionalAddUnderpayment,
       //TODO - Definitive Countervailing Duty Underpayment Type
       postDefinitiveCountervailingDutyType,
       getDefinitiveCountervailingDutyUnderpayment,
       postDefinitiveCountervailingDutyUnderpayment,
       getDefinitiveCountervailingDutyUnderpaymentConfirm,
       postDefinitiveCountervailingDutyUnderpaymentConfirm,
+      getChangeDefinitiveCountervailingAddUnderpayment,
+      getRemoveDefinitiveCountervailingAddUnderpayment,
+      postRemoveDefinitiveCountervailingAddUnderpayment,
       //TODO - Provisional Countervailing Duty Underpayment Type
       getUnderpaymentType,
       postProvisionalCountervailingDutyType,
@@ -103,6 +122,9 @@ class IVDSimulation extends PerformanceTestRunner {
       postProvisionalCountervailingDutyUnderpayment,
       getProvisionalCountervailingDutyUnderpaymentConfirm,
       postProvisionalCountervailingDutyUnderpaymentConfirm,
+      getChangeProvisionalCountervailingAddUnderpayment,
+      getRemoveProvisionalCountervailingAddUnderpayment,
+      postRemoveProvisionalCountervailingAddUnderpayment,
       //TODO - Agricultural Products Underpayment Type
       getUnderpaymentType,
       postAgriculturalProductsType,
@@ -110,13 +132,28 @@ class IVDSimulation extends PerformanceTestRunner {
       postAgriculturalProductsUnderpayment,
       getAgriculturalProductsUnderpaymentConfirm,
       postAgriculturalProductsUnderpaymentConfirm,
+      getChangeCustomsDutyAgriculturalProductsUnderpayment,
+      getRemoveCustomsDutyAgriculturalProductsUnderpayment,
+      postRemoveCustomsDutyAgriculturalProductsUnderpayment,
       //TODO - Compensatory Duty Underpayment Type
       getUnderpaymentType,
       postCompensatoryDutyType,
       getCompensatoryDutyUnderpayment,
       postCompensatoryDutyUnderpayment,
       getCompensatoryDutyUnderpaymentConfirm,
-      postCompensatoryDutyUnderpaymentConfirm
+      postCompensatoryDutyUnderpaymentConfirm,
+      getChangeCompensatoryDutyUnderpayment,
+      getRemoveCompensatoryDutyUnderpayment,
+      postRemoveCompensatoryDutyUnderpayment,
+      //TODO - Adding Import VAT to continue journey
+      getUnderpaymentType,
+      postImportVATDutyType,
+      getImportVATUnderpayment,
+      postImportVATUnderpayment,
+      getImportVATUnderpaymentConfirm,
+      postImportVATUnderpaymentConfirm,
+      getUnderpaymentSummary,
+      postUnderpaymentSummary
     )
 
   setup("importerSectionFour", "Importer Flow Section 4 - Underpayment Reasons")
