@@ -383,7 +383,7 @@ class IVDSimulation extends PerformanceTestRunner {
 
   setup("importerSectionFive", "Importer Flow Section 5 - Upload File")
     .withRequests(
-      getSupportingDocumentation,
+      getDocumentsYouMustUpload,
       getUploadfile,
       getUploadFileSuccessRedirect,
       upscanPost,
