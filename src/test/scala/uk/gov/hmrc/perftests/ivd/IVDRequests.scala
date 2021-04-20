@@ -65,6 +65,9 @@ object IVDRequests extends BaseRequests with Pages {
 
   val getDocumentsYouMustUpload: HttpRequestBuilder = buildGetRequest(DocumentsYouMustUploadPage, false)
 
+  val getAnyOtherSupportingDocs: HttpRequestBuilder = buildGetRequest(AnyOtherSupportingDocsPage, false)
+  val postAnyOtherSupportingDocs: HttpRequestBuilder = buildPostRequest(AnyOtherSupportingDocsPage, Some(List(("value", "false"))))
+
   val getUploadfile: HttpRequestBuilder = buildGetRequest(UploadFilePage,false)
 
   val getUploadFileSuccessRedirect: HttpRequestBuilder = buildGetRequest(UploadFileSuccessRedirectPage, false, expectedStatus = 303)

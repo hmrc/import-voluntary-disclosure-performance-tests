@@ -31,6 +31,7 @@ trait Pages extends BaseRequests {
   object TraderContactDetailsPage extends Page("/disclosure/your-contact-details", "Trader Contact Details")
   object DefermentPage extends Page("/disclosure/how-will-you-pay", "Deferment")
   object DocumentsYouMustUploadPage extends Page("/disclosure/mandatory-documents", "Documents You Must Upload")
+  object AnyOtherSupportingDocsPage extends Page("/disclosure/further-documents", "Any Other Supporting Documents")
   object ImporterAddressPage extends Page("/disclosure/address-correct", "Importer Address")
   object UploadFilePage extends Page("/disclosure/upload-file", "Upload File")
   object UploadFileSuccessRedirectPage extends Page(s"/disclosure/upload-file/upscan-response?key=$${upscanKey}", "Upload File Success Redirect")
