@@ -386,6 +386,8 @@ class IVDSimulation extends PerformanceTestRunner {
       getDocumentsYouMustUpload,
       getAnyOtherSupportingDocs,
       postAnyOtherSupportingDocs,
+      getWhichDocumentsUpload,
+      postWhichDocumentsUpload,
       getUploadfile,
       getUploadFileSuccessRedirect,
       upscanPost,
