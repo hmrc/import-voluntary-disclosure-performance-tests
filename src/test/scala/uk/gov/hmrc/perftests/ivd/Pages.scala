@@ -145,5 +145,6 @@ trait Pages extends BaseRequests {
   object RemoveCustomsDutyAgriculturalProductsUnderpaymentPage extends Page("/disclosure/remove-customs-duty-agricultural-products-underpayment-confirm","Remove Customs Duty Agricultural Products Underpayment")
   object ChangeCompensatoryDutyUnderpaymentPage extends Page("/disclosure/change-compensatory-duty-underpayment-details","Change Compensatory Duty Underpayment")
   object RemoveCompensatoryDutyUnderpaymentPage extends Page("/disclosure/remove-compensatory-duty-underpayment-confirm","Remove Compensatory Duty Underpayment")
+  object ImportersAddressLookupPage extends Page("/importer-address-callback?id=12345","Importers Address Lookup")
 
 }

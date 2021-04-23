@@ -238,6 +238,142 @@ class IVDSimulation extends PerformanceTestRunner {
       postEnterBox41ValuePage,
       getUnderpaymentBoxConfirmationPage,
       postUnderpaymentBoxConfirmationPage,
+      getBoxReasonSummary,
+      postBoxReasonSummary,
+      // Change Box reasons
+      getInitialiseChangeBox22Reason,
+      getChangeBoxReason,
+      getRemoveBoxReason,
+      postRemoveBoxReason,
+      getChangeBox22ValuePage,
+      postChangeBox22ValuePage,
+      getInitialiseChangeBox33Reason,
+      getChangeBoxReason,
+      getItemNumberForBoxReason,
+      postItemNumberForBoxReason,
+      getChangeBox33ValuePage,
+      postChangeBox33ValuePage,
+      getInitialiseChangeBox34Reason,
+      getChangeBox34ValuePage,
+      postChangeBox34ValuePage,
+      getInitialiseChangeBox35Reason,
+      getChangeBox35ValuePage,
+      postChangeBox35ValuePage,
+      getInitialiseChangeBox36Reason,
+      getChangeBox36ValuePage,
+      postChangeBox36ValuePage,
+      getInitialiseChangeBox37Reason,
+      getChangeBox37ValuePage,
+      postChangeBox37ValuePage,
+      getInitialiseChangeBox38Reason,
+      getChangeBox38ValuePage,
+      postChangeBox38ValuePage,
+      getInitialiseChangeBox39Reason,
+      getChangeBox39ValuePage,
+      postChangeBox39ValuePage,
+      getInitialiseChangeBox41Reason,
+      getChangeBox41ValuePage,
+      postChangeBox41ValuePage,
+      getConfirmationBoxChangePage,
+      postConfirmationBoxChangePage,
+      getHasFurtherInformation,
+      postHasFurtherInformation,
+      getMoreInformation,
+      postMoreInformation
+    )
+
+  setup("importerSectionFive", "Importer Flow Section 5 - Upload File")
+    .withRequests(
+      getDocumentsYouMustUpload,
+      getAnyOtherSupportingDocs,
+      postAnyOtherSupportingDocs,
+      getUploadfile,
+      getUploadFileSuccessRedirect,
+      upscanPost,
+      getUploadFilePolling,
+      getUploadAnotherFile,
+      postUploadAnotherFile,
+      getRemoveUploadedFile,
+      postRemoveUploadedFile,
+    )
+
+  setup("importerSectionSix", "Importer Flow Section 6 - Contact Details")
+    .withRequests(
+      getTraderContactDetails,
+      postTraderContactDetails,
+      getImporterAddress,
+      postImporterAddress,
+    )
+
+  setup("importerSectionSeven", "Importer Flow Section 7 - Payment Information")
+    .withRequests(
+      getDeferment,
+      postDefermentByOther,
+      getImportersDAN,
+      postImportersDAN
+    )
+
+  setup("importerSectionEight", "Importer Flow Section 8 - CYA and Submit")
+    .withRequests(
+      getCheckYourAnswers,
+      getConfirmation
+    )
+
+  setup("representativeSectionTwo", "Representative Flow Section 2 - Entry Details")
+    .withRequests(
+      getIndexPage,
+      getUserType,
+      postUserTypeRepresentative,
+      getImporterName,
+      postImporterName,
+      getImportersAddress,
+      getImporterEORIExists,
+      postImporterEORIExists,
+      getImportersEORINumber,
+      postImportersEORINumber,
+      getNumberOfEntries,
+      postNumberOfEntries,
+      getEntryDetails,
+      postEntryDetails,
+      getAcceptanceDate,
+      postAcceptanceDate,
+      getEnterCustomsProcedureCode,
+      postEnterCustomsProcedureCode
+    )
+
+  setup("representativeSectionThree", "Representative Flow Section 3 - Underpayment Amount")
+    .withRequests(
+      getUnderpaymentIntroduction,
+      //TODO - Import VAT Underpayment Type
+      getUnderpaymentType,
+      postImportVATDutyType,
+      getImportVATUnderpayment,
+      postImportVATUnderpayment,
+      getImportVATUnderpaymentConfirm,
+      postImportVATUnderpaymentConfirm,
+      getUnderpaymentSummary,
+      postUnderpaymentSummaryAddAnother,
+      //TODO - Customs Duty Underpayment Type
+      getUnderpaymentType,
+      postCustomsDutyType,
+      getCustomsDutyUnderpayment,
+      postCustomsDutyUnderpayment,
+      getCustomsDutyUnderpaymentConfirm,
+      postCustomsDutyUnderpaymentConfirm,
+      getUnderpaymentSummary,
+      postUnderpaymentSummary
+    )
+
+  setup("representativeSectionFour", "Representative Flow Section 4 - Underpayment Reasons")
+    .withRequests(
+      getBoxGuidancePage,
+      //TODO - Box 22
+      getBoxNumber,
+      postBoxNumber22,
+      getEnterBox22ValuePage,
+      postEnterBox22ValuePage,
+      getUnderpaymentBoxConfirmationPage,
+      postUnderpaymentBoxConfirmationPage,
       //TODO - Box 42
       getBoxNumber,
       postBoxNumber42,
@@ -309,42 +445,6 @@ class IVDSimulation extends PerformanceTestRunner {
       postEnterBox68ValuePage,
       getUnderpaymentBoxConfirmationPage,
       postUnderpaymentBoxConfirmationPage,
-      getBoxReasonSummary,
-      postBoxReasonSummary,
-      // Change Box reasons
-      getInitialiseChangeBox22Reason,
-      getChangeBoxReason,
-      getRemoveBoxReason,
-      postRemoveBoxReason,
-      getChangeBox22ValuePage,
-      postChangeBox22ValuePage,
-      getInitialiseChangeBox33Reason,
-      getChangeBoxReason,
-      getItemNumberForBoxReason,
-      postItemNumberForBoxReason,
-      getChangeBox33ValuePage,
-      postChangeBox33ValuePage,
-      getInitialiseChangeBox34Reason,
-      getChangeBox34ValuePage,
-      postChangeBox34ValuePage,
-      getInitialiseChangeBox35Reason,
-      getChangeBox35ValuePage,
-      postChangeBox35ValuePage,
-      getInitialiseChangeBox36Reason,
-      getChangeBox36ValuePage,
-      postChangeBox36ValuePage,
-      getInitialiseChangeBox37Reason,
-      getChangeBox37ValuePage,
-      postChangeBox37ValuePage,
-      getInitialiseChangeBox38Reason,
-      getChangeBox38ValuePage,
-      postChangeBox38ValuePage,
-      getInitialiseChangeBox39Reason,
-      getChangeBox39ValuePage,
-      postChangeBox39ValuePage,
-      getInitialiseChangeBox41Reason,
-      getChangeBox41ValuePage,
-      postChangeBox41ValuePage,
       getInitialiseChangeBox42Reason,
       getChangeBox42ValuePage,
       postChangeBox42ValuePage,
@@ -372,16 +472,13 @@ class IVDSimulation extends PerformanceTestRunner {
       getInitialiseChangeBox68Reason,
       getChangeBox68ValuePage,
       postChangeBox68ValuePage,
-      getConfirmationBoxChangePage,
-      postConfirmationBoxChangePage,
       getHasFurtherInformation,
       postHasFurtherInformation,
       getMoreInformation,
-      postMoreInformation,
-      getConfirmEORINumber
+      postMoreInformation
     )
 
-  setup("importerSectionFive", "Importer Flow Section 5 - Upload File")
+  setup("representativeSectionFive", "Representative Flow Section 5 - Upload File")
     .withRequests(
       getDocumentsYouMustUpload,
       getAnyOtherSupportingDocs,
@@ -398,7 +495,7 @@ class IVDSimulation extends PerformanceTestRunner {
       postRemoveUploadedFile,
     )
 
-  setup("importerSectionSix", "Importer Flow Section 6 - Contact Details")
+  setup("representativeSectionSix", "Representative Flow Section 6 - Contact Details")
     .withRequests(
       getTraderContactDetails,
       postTraderContactDetails,
@@ -406,44 +503,23 @@ class IVDSimulation extends PerformanceTestRunner {
       postImporterAddress,
     )
 
-  setup("importerSectionSeven", "Importer Flow Section 7 - Payment Information")
-    .withRequests(
-      getDeferment,
-      postDeferment,
-      getImportersDAN,
-      postImportersDAN
-    )
-
-  setup("importerSectionEight", "Importer Flow Section 8 - CYA and Submit")
-    .withRequests(
-      getCheckYourAnswers,
-      getConfirmation
-    )
-
-  setup("representativeSectionTwo", "Representative Flow Section 2 - Entry Details")
-    .withRequests(
-      getIndexPage,
-      getUserType,
-      postUserTypeRepresentative,
-      getImporterName,
-      postImporterName,
-      getImporterEORIExists,
-      postImporterEORIExists,
-      getImportersEORINumber,
-      postImportersEORINumber
-    )
-
   setup("representativeSectionSeven", "Representative Flow Section 7 - Payment Information")
     .withRequests(
+      getDeferment,
+      postDefermentByDeferment,
       getSplitPayemnt,
       postSplitPayemnt,
-      getRepresentativeDAN,
-      postRepresentativeDAN,
       getRepresentativeDANDuty,
       postRepresentativeDANDuty,
       getRepresentativeDutySingleAuthorityProofUpload,
       getRepresentativeDANImportVAT,
       postRepresentativeDANImportVAT
+    )
+
+  setup("representativeSectionEight", "Representative Flow Section 8 - CYA and Submit")
+    .withRequests(
+      getCheckYourAnswers,
+      getConfirmation
     )
 
   runSimulation()

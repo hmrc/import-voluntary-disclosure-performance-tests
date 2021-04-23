@@ -117,5 +117,6 @@ object UnderpaymentsRequests extends BaseRequests with Pages {
 
   val getUnderpaymentSummary: HttpRequestBuilder = buildGetRequest(UnderpaymentSummaryPage)
   val postUnderpaymentSummary: HttpRequestBuilder = buildPostRequest(UnderpaymentSummaryPage, Some(List(("value", "false"))))
+  val postUnderpaymentSummaryAddAnother: HttpRequestBuilder = buildPostRequest(UnderpaymentSummaryPage, Some(List(("value", "true"))))
 
 }

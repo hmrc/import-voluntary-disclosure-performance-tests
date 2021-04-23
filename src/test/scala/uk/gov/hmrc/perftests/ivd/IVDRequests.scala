@@ -61,7 +61,8 @@ object IVDRequests extends BaseRequests with Pages {
   val postImporterAddress: HttpRequestBuilder = buildPostRequest(ImporterAddressPage, Some(List(("value", "true"))))
 
   val getDeferment: HttpRequestBuilder = buildGetRequest(DefermentPage)
-  val postDeferment: HttpRequestBuilder = buildPostRequest(DefermentPage, Some(List(("value", "false"))))
+  val postDefermentByOther: HttpRequestBuilder = buildPostRequest(DefermentPage, Some(List(("value", "false"))))
+  val postDefermentByDeferment: HttpRequestBuilder = buildPostRequest(DefermentPage, Some(List(("value", "true"))))
 
   val getDocumentsYouMustUpload: HttpRequestBuilder = buildGetRequest(DocumentsYouMustUploadPage, false)
 
@@ -114,19 +115,19 @@ object IVDRequests extends BaseRequests with Pages {
   val getRepresentativeDAN: HttpRequestBuilder = buildGetRequest(RepresentativeDANPage)
   val postRepresentativeDAN: HttpRequestBuilder = buildPostRequest(RepresentativeDANPage, Some(List(
     ("accountNumber" -> "1234567"),
-    ("value", "value-3"))))
+    ("value", "C"))))
 
   val getRepresentativeDANDuty: HttpRequestBuilder = buildGetRequest(RepresentativeDANDutyPage)
   val postRepresentativeDANDuty: HttpRequestBuilder = buildPostRequest(RepresentativeDANDutyPage, Some(List(
     ("accountNumber" -> "1234567"),
-    ("value", "value-3"))))
+    ("value", "B"))))
 
   val getRepresentativeDutySingleAuthorityProofUpload: HttpRequestBuilder = buildGetRequest(RepresentativeUploadProofOfAuthorityPage, false)
 
   val getRepresentativeDANImportVAT: HttpRequestBuilder = buildGetRequest(RepresentativeDANImportVATPage)
   val postRepresentativeDANImportVAT: HttpRequestBuilder = buildPostRequest(RepresentativeDANImportVATPage, Some(List(
     ("accountNumber" -> "1234567"),
-    ("value", "value-3"))))
+    ("value", "C"))))
 
   val getChangeImportVATUnderpayment: HttpRequestBuilder = buildGetRequest(ChangeImportVATUnderpaymentPage)
   val getRemoveImportVATUnderpayment: HttpRequestBuilder = buildGetRequest(RemoveImportVATUnderpaymentPage)
@@ -168,4 +169,5 @@ object IVDRequests extends BaseRequests with Pages {
   val getRemoveCompensatoryDutyUnderpayment: HttpRequestBuilder = buildGetRequest(RemoveCompensatoryDutyUnderpaymentPage)
   val postRemoveCompensatoryDutyUnderpayment: HttpRequestBuilder = buildPostRequest(RemoveCompensatoryDutyUnderpaymentPage, Some(List(("value", "true"))))
 
+  val getImportersAddress: HttpRequestBuilder = buildGetRequest(ImportersAddressLookupPage, expectedStatus = 303, csrf = false)
 }
