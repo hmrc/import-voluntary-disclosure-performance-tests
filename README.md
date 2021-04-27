@@ -3,6 +3,26 @@
 # import-voluntary-disclosure-performance-tests
 Performance test suite for the `<digital service name>`, using [performance-test-runner](https://github.com/hmrc/performance-test-runner) under the hood.
 
+## Important Pre-requisite
+Before the tests can be run, an update to application.conf needs to be made within the import-voluntary-disclosure-fronted
+service.
+
+Please update the following entry from:
+
+```
+    address-lookup-frontend {
+      host = localhost
+      port = 9028
+    }
+```
+
+to:
+```
+    address-lookup-frontend {
+      host = localhost
+      port = 7952
+    }
+```
 
 ## Running the tests
 
