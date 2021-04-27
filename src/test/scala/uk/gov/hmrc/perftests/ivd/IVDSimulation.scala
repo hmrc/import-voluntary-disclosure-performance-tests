@@ -482,7 +482,7 @@ class IVDSimulation extends PerformanceTestRunner {
       postMoreInformation
     )
 
-  setup("representativeSectionFive", "Representative Flow Section 5 - Upload File")
+  setup("representativeSectionFive", "a")
     .withRequests(
       getDocumentsYouMustUpload,
       getAnyOtherSupportingDocs,
