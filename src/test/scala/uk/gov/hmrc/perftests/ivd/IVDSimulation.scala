@@ -331,6 +331,8 @@ class IVDSimulation extends PerformanceTestRunner {
       postImporterEORIExists,
       getImportersEORINumber,
       postImportersEORINumber,
+      getImporterVATRegistered,
+      postImporterVATRegistered,
       getNumberOfEntries,
       postNumberOfEntries,
       getEntryDetails,
