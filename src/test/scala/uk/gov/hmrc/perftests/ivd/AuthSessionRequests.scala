@@ -41,7 +41,7 @@ object AuthSessionRequests extends BaseRequests with Pages {
       .formParam("redirectionUrl", "/disclose-import-taxes-underpayment")
       .formParam("credentialStrength", "weak")
       .formParam("confidenceLevel", "50")
-      .formParam("affinityGroup", "Individual")
+      .formParam("affinityGroup", "Organisation")
       .formParam("usersName", "")
       .formParam("email", "user@test.com")
       .formParam("credentialRole", "User")

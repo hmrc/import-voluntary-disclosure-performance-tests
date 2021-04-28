@@ -73,7 +73,7 @@ object IVDRequests extends BaseRequests with Pages {
   val postAnyOtherSupportingDocs: HttpRequestBuilder = buildPostRequest(AnyOtherSupportingDocsPage, Some(List(("value", "false"))))
 
   val getWhichDocumentsUpload: HttpRequestBuilder = buildGetRequest(WhichDocumentsUploadPage)
-  val postWhichDocumentsUpload: HttpRequestBuilder = buildPostRequest(WhichDocumentsUploadPage, Some(List(("optionalDocumentsList[]", "true"))))
+  val postWhichDocumentsUpload: HttpRequestBuilder = buildPostRequest(WhichDocumentsUploadPage, Some(List(("optionalDocumentsList[]", "importAndEntry"))))
 
 
   val getUploadfile: HttpRequestBuilder = buildGetRequest(UploadFilePage,false)
