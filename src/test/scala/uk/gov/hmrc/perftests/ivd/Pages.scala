@@ -27,6 +27,7 @@ trait Pages extends BaseRequests {
   object NumberOfEntriesPage extends Page("/one-or-more-entries", "Number Of Entries")
   object EntryDetailsPage extends Page("/disclosure/entry-details", "Entry Details")
   object AcceptanceDatePage extends Page("/disclosure/when-entry-acceptance-date", "Acceptance Date")
+  object OneCustomsProcedureCodePage extends Page("/disclosure/only-one-cpc", "One Customs Procedure Code")
   object EnterCustomsProcedureCodePage extends Page("/disclosure/enter-cpc", "Enter Customs Procedure Code")
   object TraderContactDetailsPage extends Page("/disclosure/your-contact-details", "Trader Contact Details")
   object DefermentPage extends Page("/disclosure/how-will-you-pay", "Deferment")
