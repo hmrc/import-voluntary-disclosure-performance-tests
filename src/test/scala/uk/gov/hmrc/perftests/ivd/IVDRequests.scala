@@ -34,6 +34,7 @@ object IVDRequests extends BaseRequests with Pages {
 
   val getNumberOfEntries: HttpRequestBuilder = buildGetRequest(NumberOfEntriesPage)
   val postNumberOfEntries: HttpRequestBuilder = buildPostRequest(NumberOfEntriesPage, Some(List(("value", "oneEntry"))))
+  val postNumberOfEntriesBulk: HttpRequestBuilder = buildPostRequest(NumberOfEntriesPage, Some(List(("value", "moreThanOneEntry"))))
 
   val getEntryDetails: HttpRequestBuilder = buildGetRequest(EntryDetailsPage)
   val postEntryDetails: HttpRequestBuilder = buildPostRequest(EntryDetailsPage,
@@ -76,9 +77,11 @@ object IVDRequests extends BaseRequests with Pages {
   val postWhichDocumentsUpload: HttpRequestBuilder = buildPostRequest(WhichDocumentsUploadPage, Some(List(("optionalDocumentsList[]", "importAndEntry"))))
 
 
-  val getUploadfile: HttpRequestBuilder = buildGetRequest(UploadFilePage,false)
+  val getUploadFile: HttpRequestBuilder = buildGetRequest(UploadFilePage,false)
+  val getUploadFileBulk: HttpRequestBuilder = buildGetRequest(UploadFilePage,false)
 
   val getUploadFileSuccessRedirect: HttpRequestBuilder = buildGetRequest(UploadFileSuccessRedirectPage, false, expectedStatus = 303)
+  val getUploadFileBulkSuccessRedirect: HttpRequestBuilder = buildGetRequest(UploadFileBulkSuccessRedirectPage, false, expectedStatus = 303)
 
   val getUploadFilePolling: HttpRequestBuilder =  buildGetRequest(UploadFilePollingPage, false, expectedStatus = 303)
 
