@@ -562,5 +562,11 @@ class IVDSimulation extends PerformanceTestRunner {
       getConfirmation
     )
 
-    runSimulation()
+  setup("sectionNine", "Flow Section 9 - Update disclosure")
+    .withRequests(
+      getDisclosureReferenceNumber,
+      postDisclosureReferenceNumber
+    )
+
+  runSimulation()
 }

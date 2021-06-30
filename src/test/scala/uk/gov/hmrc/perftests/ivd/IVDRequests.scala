@@ -135,6 +135,9 @@ object IVDRequests extends BaseRequests with Pages {
     ("accountNumber" -> "1234567"),
     ("value", "C"))))
 
+  val getDisclosureReferenceNumber: HttpRequestBuilder = buildGetRequest(DisclosureReferenceNumberPage)
+  val postDisclosureReferenceNumber: HttpRequestBuilder = buildPostRequest(DisclosureReferenceNumberPage, Some(List(("value", "C181234567890123456789"))))
+
   val getChangeImportVATUnderpayment: HttpRequestBuilder = buildGetRequest(ChangeImportVATUnderpaymentPage)
   val getRemoveImportVATUnderpayment: HttpRequestBuilder = buildGetRequest(RemoveImportVATUnderpaymentPage)
   val postRemoveImportVATUnderpayment: HttpRequestBuilder = buildPostRequest(RemoveImportVATUnderpaymentPage, Some(List(("value", "true"))))

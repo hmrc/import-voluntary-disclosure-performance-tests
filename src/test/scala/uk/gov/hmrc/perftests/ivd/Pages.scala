@@ -151,4 +151,5 @@ trait Pages extends BaseRequests {
   object ImportersAddressLookupPage extends Page("/importer-address-callback?id=12345","Importers Address Lookup")
   object ImporterVATRegisteredPage extends Page("/disclosure/importer-vat-registered","Importer VAT Registered")
 
+  object DisclosureReferenceNumberPage extends Page("/update-disclosure/reference-number","Disclosure Reference Number")
 }
