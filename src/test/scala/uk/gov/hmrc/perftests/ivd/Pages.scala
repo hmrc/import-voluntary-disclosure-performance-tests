@@ -23,6 +23,8 @@ trait Pages extends BaseRequests {
 
   //Common Routes
   object IndexPage extends Page("", "Index Page")
+  object ConfirmEORIPage extends Page("/confirm-eori", "Confirm EORI")
+  object WhatDoYouWantToDoPage extends Page("/start-new-or-update", "What Do You Want To Do")
   object UserTypePage extends Page("/who-is-disclosing", "User Type")
   object NumberOfEntriesPage extends Page("/one-or-more-entries", "Number Of Entries")
   object EntryDetailsPage extends Page("/disclosure/entry-details", "Entry Details")

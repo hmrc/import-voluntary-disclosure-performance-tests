@@ -31,6 +31,9 @@ class IVDSimulation extends PerformanceTestRunner {
   setup("importerSectionTwo", "Importer Flow Section 2 - Entry Details")
     .withRequests(
       getIndexPage,
+      getConfirmEORI,
+      getWhatDoYouWantToDo,
+      postStartNewDisclosure,
       getUserType,
       postUserTypeImporter,
       getNumberOfEntries,
@@ -324,6 +327,9 @@ class IVDSimulation extends PerformanceTestRunner {
   setup("representativeSectionTwo", "Representative Flow Section 2 - Entry Details")
     .withRequests(
       getIndexPage,
+      getConfirmEORI,
+      getWhatDoYouWantToDo,
+      postStartNewDisclosure,
       getUserType,
       postUserTypeRepresentative,
       getImporterName,
@@ -531,6 +537,9 @@ class IVDSimulation extends PerformanceTestRunner {
   setup("bulkEntry", "Bulk Entry flow")
     .withRequests(
       getIndexPage,
+      getConfirmEORI,
+      getWhatDoYouWantToDo,
+      postStartNewDisclosure,
       getUserType,
       postUserTypeImporter,
       getNumberOfEntries,
