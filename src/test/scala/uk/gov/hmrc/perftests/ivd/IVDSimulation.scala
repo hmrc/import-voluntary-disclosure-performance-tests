@@ -289,7 +289,7 @@ class IVDSimulation extends PerformanceTestRunner {
       getDocumentsYouMustUpload,
       getAnyOtherSupportingDocs,
       postAnyOtherSupportingDocs,
-      getUploadfile,
+      getUploadFile,
       getUploadFileSuccessRedirect,
       upscanPost,
       getUploadFilePolling,
@@ -491,7 +491,7 @@ class IVDSimulation extends PerformanceTestRunner {
       postAnyOtherSupportingDocs,
       getWhichDocumentsUpload,
       postWhichDocumentsUpload,
-      getUploadfile,
+      getUploadFile,
       getUploadFileSuccessRedirect,
       upscanPost,
       getUploadFilePolling,
@@ -528,5 +528,39 @@ class IVDSimulation extends PerformanceTestRunner {
       getConfirmation
     )
 
-  runSimulation()
+  setup("bulkEntry", "Bulk Entry flow")
+    .withRequests(
+      getIndexPage,
+      getUserType,
+      postUserTypeImporter,
+      getNumberOfEntries,
+      postNumberOfEntriesBulk,
+      getAcceptanceDate,
+      postAcceptanceDate,
+      getUnderpaymentIntroduction,
+      getUnderpaymentType,
+      postImportVATDutyType,
+      getImportVATUnderpayment,
+      postImportVATUnderpayment,
+      getImportVATUnderpaymentConfirm,
+      postImportVATUnderpaymentConfirm,
+      getUnderpaymentSummary,
+      postUnderpaymentSummary,
+      getUploadFileBulk,
+      getUploadFileBulkSuccessRedirect,
+      upscanPost,
+      getUploadFilePolling,
+      getMoreInformation,
+      postMoreInformation,
+      getTraderContactDetails,
+      postTraderContactDetails,
+      getImporterAddress,
+      postImporterAddress,
+      getDeferment,
+      postDefermentByOther,
+      getCheckYourAnswers,
+      getConfirmation
+    )
+
+    runSimulation()
 }
