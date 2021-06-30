@@ -571,5 +571,13 @@ class IVDSimulation extends PerformanceTestRunner {
       getConfirmation
     )
 
+  setup("updateCase", "Update Case flow")
+    .withRequests(
+      getIndexPage,
+      getConfirmEORI,
+      getWhatDoYouWantToDo,
+      postUpdateExistingDisclosure
+    )
+
     runSimulation()
 }
