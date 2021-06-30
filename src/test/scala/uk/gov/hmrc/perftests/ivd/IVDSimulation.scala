@@ -576,7 +576,9 @@ class IVDSimulation extends PerformanceTestRunner {
       getIndexPage,
       getConfirmEORI,
       getWhatDoYouWantToDo,
-      postUpdateExistingDisclosure
+      postUpdateExistingDisclosure,
+      getDisclosureReferenceNumber,
+      postDisclosureReferenceNumber
     )
 
     runSimulation()
