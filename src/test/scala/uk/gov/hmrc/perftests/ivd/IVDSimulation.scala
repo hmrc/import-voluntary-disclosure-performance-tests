@@ -324,7 +324,7 @@ class IVDSimulation extends PerformanceTestRunner {
       getConfirmation
     )
 
-  setup("representativeSectionTwo", "aaaa")
+  setup("representativeSectionTwo", "Representative Flow Section 2 - Entry Details")
     .withRequests(
       getIndexPage,
       getConfirmEORI,
