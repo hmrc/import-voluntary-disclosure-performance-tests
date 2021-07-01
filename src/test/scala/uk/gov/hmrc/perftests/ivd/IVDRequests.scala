@@ -188,4 +188,7 @@ object IVDRequests extends BaseRequests with Pages {
   val getImporterVATRegistered: HttpRequestBuilder = buildGetRequest(ImporterVATRegisteredPage)
   val postImporterVATRegistered: HttpRequestBuilder = buildPostRequest(ImporterVATRegisteredPage, Some(List(("value", "true"))))
 
+  val getUpdateAdditionalInformation: HttpRequestBuilder = buildGetRequest(UpdateAdditionalInformationPage)
+  val postUpdateAdditionalInformation: HttpRequestBuilder = buildPostRequest(UpdateAdditionalInformationPage, Some(List(("value", "text"))))
+
 }

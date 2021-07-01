@@ -153,5 +153,7 @@ trait Pages extends BaseRequests {
   object RemoveCompensatoryDutyUnderpaymentPage extends Page("/disclosure/remove-compensatory-duty-underpayment-confirm","Remove Compensatory Duty Underpayment")
   object ImportersAddressLookupPage extends Page("/importer-address-callback?id=12345","Importers Address Lookup")
   object ImporterVATRegisteredPage extends Page("/disclosure/importer-vat-registered","Importer VAT Registered")
+  object UpdateAdditionalInformationPage extends Page("/update-disclosure/additional-information","Additional Information")
+
 
 }
