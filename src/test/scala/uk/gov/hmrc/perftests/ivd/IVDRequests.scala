@@ -28,6 +28,14 @@ object IVDRequests extends BaseRequests with Pages {
       .header("Cookie", "mdtp=${mdtpCookie}")
       .check(status.is(303))
 
+  val getConfirmEORI: HttpRequestBuilder = buildGetRequest(ConfirmEORIPage, csrf = false)
+
+  val getWhatDoYouWantToDo: HttpRequestBuilder = buildGetRequest(WhatDoYouWantToDoPage)
+  val postStartNewDisclosure: HttpRequestBuilder = buildPostRequest(WhatDoYouWantToDoPage, Some(List(("value","true"))))
+  val postUpdateExistingDisclosure: HttpRequestBuilder = buildPostRequest(WhatDoYouWantToDoPage, Some(List(("value","false"))))
+  val getDisclosureReferenceNumber: HttpRequestBuilder = buildGetRequest(DisclosureReferenceNumberPage)
+  val postDisclosureReferenceNumber: HttpRequestBuilder = buildPostRequest(DisclosureReferenceNumberPage, Some(List(("value", "C181234567890123456789"))))
+
   val getUserType: HttpRequestBuilder = buildGetRequest(UserTypePage)
   val postUserTypeImporter: HttpRequestBuilder = buildPostRequest(UserTypePage, Some(List(("value","importer"))))
   val postUserTypeRepresentative: HttpRequestBuilder = buildPostRequest(UserTypePage, Some(List(("value","representative"))))
