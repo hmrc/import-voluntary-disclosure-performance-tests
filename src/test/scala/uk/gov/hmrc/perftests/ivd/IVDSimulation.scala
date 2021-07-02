@@ -45,7 +45,7 @@ class IVDSimulation extends PerformanceTestRunner {
       getOneCustomsProcedureCode,
       postOneCustomsProcedureCode,
       getEnterCustomsProcedureCode,
-      postEnterCustomsProcedureCode
+      postEnterCustomsProcedureCode,
     )
 
   setup("importerSectionThree", "Importer Flow Section 3 - Underpayment Amount")
@@ -581,9 +581,10 @@ class IVDSimulation extends PerformanceTestRunner {
       postDisclosureReferenceNumber,
       getSendMoreDocumentation,
       postSendMoreDocumentation,
-      getUploadSupportingDocumentation,
-      getUploadSupportingDocumentationSuccessRedirect,
-      getUploadSupportingDocumentationPolling,
+      getUploadSupportingDocumentationSummary,
+      postUploadSupportingDocumentationSummary,
+      getRemoveSupportingDocumentation,
+      postRemoveSupportingDocumentation,
       getUpdateAdditionalInformation,
       postUpdateAdditionalInformation
     )

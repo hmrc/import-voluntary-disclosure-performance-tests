@@ -160,4 +160,6 @@ trait Pages extends BaseRequests {
   object UploadSupportingDocumentationPage extends Page("/update-disclosure/upload-file", "Upload Supporting Documentation")
   object UploadSupportingDocumentationSuccessRedirectPage extends Page(s"/update-disclosure/upload-file/upscan-response?key=$${upscanKey}", "Upload Supporting Documentation Success Redirect")
   object UploadSupportingDocumentationPollingPage extends Page(s"/update-disclosure/upload-file/polling?key=$${upscanKey}", "Upload Supporting Documentation Polling")
+  object UploadSupportingDocumentationSummaryPage extends Page(s"/update-disclosure/upload-another-file", "Upload Supporting Documentation Summary")
+  object RemoveSupportingDocumentationPage extends Page(s"/update-disclosure/confirm-file-removal/1", "Remove Supporting Documentation")
 }
