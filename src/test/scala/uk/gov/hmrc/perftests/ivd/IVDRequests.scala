@@ -191,4 +191,7 @@ object IVDRequests extends BaseRequests with Pages {
   val getSendMoreDocumentation: HttpRequestBuilder = buildGetRequest(DoYouWantToSendMoreDocumentationPage)
   val postSendMoreDocumentation: HttpRequestBuilder = buildPostRequest(DoYouWantToSendMoreDocumentationPage, Some(List(("value", "true"))))
 
+  val getUpdateAdditionalInformation: HttpRequestBuilder = buildGetRequest(UpdateAdditionalInformationPage)
+  val postUpdateAdditionalInformation: HttpRequestBuilder = buildPostRequest(UpdateAdditionalInformationPage, Some(List(("value", "text"))))
+
 }
