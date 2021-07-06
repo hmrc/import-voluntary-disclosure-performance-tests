@@ -154,12 +154,10 @@ trait Pages extends BaseRequests {
   object ImportersAddressLookupPage extends Page("/importer-address-callback?id=12345","Importers Address Lookup")
   object ImporterVATRegisteredPage extends Page("/disclosure/importer-vat-registered","Importer VAT Registered")
   object DoYouWantToSendMoreDocumentationPage extends Page("/update-disclosure/need-to-upload","Do You Want To Send Any More Documentation")
-  object UpdateAdditionalInformationPage extends Page("/update-disclosure/additional-information","Additional Information")
-
-
   object UploadSupportingDocumentationPage extends Page("/update-disclosure/upload-file", "Upload Supporting Documentation")
   object UploadSupportingDocumentationSuccessRedirectPage extends Page(s"/update-disclosure/upload-file/upscan-response?key=$${upscanKey}", "Upload Supporting Documentation Success Redirect")
   object UploadSupportingDocumentationPollingPage extends Page(s"/update-disclosure/upload-file/polling?key=$${upscanKey}", "Upload Supporting Documentation Polling")
   object UploadSupportingDocumentationSummaryPage extends Page(s"/update-disclosure/upload-another-file", "Upload Supporting Documentation Summary")
   object RemoveSupportingDocumentationPage extends Page(s"/update-disclosure/confirm-file-removal/1", "Remove Supporting Documentation")
+  object UpdateAdditionalInformationPage extends Page("/update-disclosure/additional-information","Additional Information")
 }

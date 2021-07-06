@@ -191,6 +191,9 @@ object IVDRequests extends BaseRequests with Pages {
   val getSendMoreDocumentation: HttpRequestBuilder = buildGetRequest(DoYouWantToSendMoreDocumentationPage)
   val postSendMoreDocumentation: HttpRequestBuilder = buildPostRequest(DoYouWantToSendMoreDocumentationPage, Some(List(("value", "true"))))
 
+  val getUploadSupportingDocumentation: HttpRequestBuilder = buildGetRequest(UploadSupportingDocumentationPage,false)
+  val getUploadSupportingDocumentationSuccessRedirect: HttpRequestBuilder = buildGetRequest(UploadSupportingDocumentationSuccessRedirectPage, false, expectedStatus = 303)
+  val getUploadSupportingDocumentationPolling: HttpRequestBuilder =  buildGetRequest(UploadSupportingDocumentationPollingPage, false, expectedStatus = 303)
   val getUploadSupportingDocumentationSummary: HttpRequestBuilder = buildGetRequest(UploadSupportingDocumentationSummaryPage,false)
   val postUploadSupportingDocumentationSummary: HttpRequestBuilder = buildPostRequest(UploadSupportingDocumentationSummaryPage, Some(List(("value", "false"))))
   val getRemoveSupportingDocumentation: HttpRequestBuilder = buildGetRequest(RemoveSupportingDocumentationPage,false)
