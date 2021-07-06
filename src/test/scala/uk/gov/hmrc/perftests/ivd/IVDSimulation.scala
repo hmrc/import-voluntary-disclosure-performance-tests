@@ -581,6 +581,14 @@ class IVDSimulation extends PerformanceTestRunner {
       postDisclosureReferenceNumber,
       getSendMoreDocumentation,
       postSendMoreDocumentation,
+      getUploadSupportingDocumentation,
+      getUploadSupportingDocumentationSuccessRedirect,
+      upscanPost,
+      getUploadSupportingDocumentationPolling,
+      getUploadSupportingDocumentationSummary,
+      postUploadSupportingDocumentationSummary,
+      getRemoveSupportingDocumentation,
+      postRemoveSupportingDocumentation,
       getUpdateAdditionalInformation,
       postUpdateAdditionalInformation
     )
