@@ -590,7 +590,8 @@ class IVDSimulation extends PerformanceTestRunner {
       getRemoveSupportingDocumentation,
       postRemoveSupportingDocumentation,
       getUpdateAdditionalInformation,
-      postUpdateAdditionalInformation
+      postUpdateAdditionalInformation,
+      getCheckYourAnswersUpdateCase
     )
 
     runSimulation()
