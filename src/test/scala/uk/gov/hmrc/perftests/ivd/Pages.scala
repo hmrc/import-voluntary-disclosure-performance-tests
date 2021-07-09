@@ -49,6 +49,7 @@ trait Pages extends BaseRequests {
   object CheckYourAnswersPage extends Page("/disclosure/check-your-answers", "Check Your Answers")
   object CheckYourAnswersUpdateCasePage extends Page("/update-disclosure/check-your-answers", "Check Your Answers")
   object ConfirmationPage extends Page("/disclosure/confirmation", "Confirmation Page")
+  object UpdateCaseConfirmationPage extends Page("/update-disclosure/confirmation", "Update Case Confirmation Page")
   object BoxGuidancePage extends Page("/disclosure/reason-introduction", "Box Guidance")
   object BoxNumberPage extends Page("/disclosure/box-number", "Box Number")
   object BoxItemLevelPage extends Page("/disclosure/item-number", "Box Item Level")
