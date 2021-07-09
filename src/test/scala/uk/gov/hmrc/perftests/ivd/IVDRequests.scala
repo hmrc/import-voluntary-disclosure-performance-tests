@@ -103,6 +103,7 @@ object IVDRequests extends BaseRequests with Pages {
   val getCheckYourAnswersUpdateCase: HttpRequestBuilder = buildGetRequest(CheckYourAnswersUpdateCasePage, false)
 
   val getConfirmation: HttpRequestBuilder = buildGetRequest(ConfirmationPage, false)
+  val getUpdateCaseConfirmation: HttpRequestBuilder = buildGetRequest(UpdateCaseConfirmationPage, false)
 
   val getImporterName: HttpRequestBuilder = buildGetRequest(ImporterNamePage,false)
   val postImporterName: HttpRequestBuilder = buildPostRequest(ImporterNamePage,Some(List(("fullName", "Test User"))))
